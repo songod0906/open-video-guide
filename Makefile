@@ -1,7 +1,9 @@
-.PHONY: setup lint test check validate web
+.PHONY: setup lint test check validate web context handoff
 
 setup:
 	python -m pip install -e ".[dev]"
+	git config core.hooksPath .githooks
+	python scripts/project_context.py
 
 lint:
 	python -m ruff check .
@@ -18,3 +20,9 @@ validate:
 
 web:
 	ovg-web
+
+context:
+	python scripts/project_context.py --print
+
+handoff:
+	python scripts/project_context.py --verify --print

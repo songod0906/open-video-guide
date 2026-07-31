@@ -149,6 +149,28 @@ Git ignores this directory.
 
 See [the local editor guide](docs/LOCAL_EDITOR.md) for the complete workflow.
 
+## Shared Codex and Claude work
+
+The repository has one shared project state for Codex and Claude.
+Each agent reads the same goals, verified capabilities, limits, and task queue.
+
+Refresh the current project context:
+
+```bash
+python scripts/project_context.py
+```
+
+Create a verified handoff:
+
+```bash
+make handoff
+```
+
+The generated handoff is `.project-context/PROJECT_CONTEXT.md`.
+Git ignores this file because it contains live repository data.
+
+See [the shared agent handoff](docs/SHARED_AGENT_HANDOFF.md) for operating instructions.
+
 The benchmark validator checks public records without the source videos.
 Use its media option to check local source digests.
 

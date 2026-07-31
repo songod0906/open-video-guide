@@ -1,0 +1,2 @@
+#!/bin/sh
+python scripts/project_context.py >/dev/null 2>&1 || true

@@ -1,0 +1,151 @@
+{
+  "schema_version": "1.0",
+  "product": {
+    "name": "Open Video Guide",
+    "mission": "Turn a tutorial video into an evidence-grounded illustrated guide.",
+    "position": "Local-first and open source.",
+    "release_state": "Testable local alpha",
+    "current_stage": "Stage 3: Alpha product"
+  },
+  "current_milestone": {
+    "name": "User-tested local review workflow",
+    "status": "in_progress",
+    "objective": "Measure the complete review workflow and improve silent-video quality.",
+    "last_verified_implementation_commit": "e4334e0"
+  },
+  "verified_capabilities": [
+    {
+      "id": "CAP-001",
+      "name": "Local guide pipeline",
+      "state": "verified",
+      "evidence": "docs/evidence/2026-07-31-local-alpha.md"
+    },
+    {
+      "id": "CAP-002",
+      "name": "Local review editor",
+      "state": "verified",
+      "evidence": "docs/evidence/2026-07-31-local-editor.md"
+    },
+    {
+      "id": "CAP-003",
+      "name": "Odysseus Model Context Protocol integration",
+      "state": "verified",
+      "evidence": "docs/evidence/2026-07-31-local-alpha.md"
+    },
+    {
+      "id": "CAP-004",
+      "name": "Local speech and vision model profile",
+      "state": "verified",
+      "evidence": "docs/MODEL_PROFILE_ALPHA.md"
+    },
+    {
+      "id": "CAP-005",
+      "name": "Twenty-video benchmark inventory",
+      "state": "verified",
+      "evidence": "benchmark/README.md"
+    },
+    {
+      "id": "CAP-006",
+      "name": "Shared Codex and Claude handoff",
+      "state": "verified",
+      "evidence": "docs/evidence/2026-07-31-shared-agent-handoff.md"
+    }
+  ],
+  "task_queue": [
+    {
+      "id": "P0-001",
+      "priority": "P0",
+      "state": "ready",
+      "title": "Run a guided user test with a silent software tutorial.",
+      "acceptance": [
+        "The user completes upload, review, save, and export.",
+        "The test records completion time and correction problems.",
+        "The repository contains a dated evidence record."
+      ]
+    },
+    {
+      "id": "P0-002",
+      "priority": "P0",
+      "state": "ready",
+      "title": "Replace fixed-only frame selection with visual change signals.",
+      "acceptance": [
+        "Candidate selection uses scene, motion, or interface-change evidence.",
+        "A benchmark compares the change with the fixed-window baseline.",
+        "Silent-video recall does not decrease."
+      ]
+    },
+    {
+      "id": "P1-001",
+      "priority": "P1",
+      "state": "ready",
+      "title": "Add resumable web jobs.",
+      "acceptance": [
+        "An interrupted job continues without duplicate artifacts.",
+        "Restart tests pass.",
+        "The job record keeps each completed stage."
+      ]
+    },
+    {
+      "id": "P1-002",
+      "priority": "P1",
+      "state": "ready",
+      "title": "Complete the first repository threat model.",
+      "acceptance": [
+        "The model covers media, browser, model, and client boundaries.",
+        "Each high risk has a control or an accepted owner.",
+        "The risk register matches the threat model."
+      ]
+    },
+    {
+      "id": "P1-003",
+      "priority": "P1",
+      "state": "ready",
+      "title": "Test installation on a clean supported computer.",
+      "acceptance": [
+        "A new user follows only the installation guide.",
+        "The package creates and exports one guide.",
+        "The test records download, disk, memory, and time data."
+      ]
+    }
+  ],
+  "known_limits": [
+    "Fixed windows can combine actions or miss short actions.",
+    "Silent-video quality does not meet the release gate.",
+    "Confidence values are not calibrated.",
+    "A running web job does not resume after interruption.",
+    "The local editor does not delete stored jobs.",
+    "Every generated step needs user review."
+  ],
+  "non_negotiable_rules": [
+    "Keep the product local-first and open source.",
+    "Do not require a paid Artificial intelligence service.",
+    "Keep evidence and timestamps with each generated step.",
+    "Keep the core engine independent from client adapters.",
+    "Do not commit private media, model weights, logs, or generated guides.",
+    "Do not claim a capability without test evidence."
+  ],
+  "important_paths": [
+    "AGENTS.md",
+    "CLAUDE.md",
+    "docs/PRODUCT_REQUIREMENTS.md",
+    "docs/ARCHITECTURE.md",
+    "docs/ROADMAP.md",
+    "docs/RISK_REGISTER.md",
+    "docs/TERMINOLOGY.md",
+    "docs/evidence",
+    "src/open_video_guide",
+    "tests"
+  ],
+  "quality_commands": [
+    "python scripts/check_ste.py",
+    "python -m pytest",
+    "python -m ruff check ."
+  ],
+  "handoff_rules": [
+    "The latest user request has priority over the task queue.",
+    "Inspect the current Git state before you make a plan.",
+    "Preserve user changes and unrelated work.",
+    "Update this file only when semantic project state changes.",
+    "Run the handoff command before you transfer work."
+  ]
+}

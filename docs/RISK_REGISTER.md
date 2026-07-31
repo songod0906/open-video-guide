@@ -22,6 +22,7 @@
 | R-18 | A test driver performs an unintended administration call | Low | High | Bind locally and use fixed test actions | Software engineer |
 | R-19 | Local jobs use excessive storage | Medium | High | Limit uploads and show stored job sizes | Software engineer |
 | R-20 | Another website sends a local editor command | Medium | High | Check the host and write-request origin | Security reviewer |
+| R-21 | An agent uses stale project context | Medium | High | Refresh from Git and keep one project state | Technical lead |
 
 Review this register at each stage gate.
 Add a risk when a change adds a new trust boundary.
