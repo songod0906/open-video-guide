@@ -1,8 +1,19 @@
 # MCP Tool Contract
 
-Status: Draft
+Status: Draft with an implemented alpha subset
 
 Contract version: `0.1`
+
+## Alpha subset
+
+The local alpha implements `inspect_video` and `create_guide`.
+Both tools use the standard input and standard output transport.
+
+The alpha `create_guide` call is synchronous.
+It also requires an approved output directory.
+
+The later job service will implement the complete asynchronous contract below.
+Do not claim support for the other draft tools.
 
 ## 1. Contract rules
 

@@ -25,6 +25,12 @@ The first MCP server will expose these tools:
 Write tools must use idempotency keys.
 The server must require confirmation for a consequential file change.
 
+The local alpha implements `inspect_video` and synchronous `create_guide`.
+The local transport smoke test passed on 2026-07-31.
+
+Odysseus support is not yet verified.
+The installed application needs an authenticated session for that test.
+
 ## 3. ChatGPT and Codex
 
 OpenAI now describes this integration surface as a plugin.

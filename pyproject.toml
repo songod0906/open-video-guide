@@ -25,6 +25,16 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
+local-ai = [
+  "faster-whisper>=1.2,<2",
+  "mlx-vlm>=0.6.8,<0.7",
+  "Pillow>=11,<13",
+  "torch>=2.7,<3",
+  "torchvision>=0.22,<1"
+]
+mcp = [
+  "mcp>=1.29,<2"
+]
 dev = [
   "pytest>=8.3,<10",
   "ruff>=0.12,<1"
@@ -32,6 +42,7 @@ dev = [
 
 [project.scripts]
 ovg = "open_video_guide.cli:main"
+ovg-mcp = "open_video_guide.adapters.mcp_server:main"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/open_video_guide"]

@@ -6,16 +6,19 @@ The project is local-first and open source. It does not require a paid AI API.
 Users supply the computer, storage, network bandwidth, and electricity.
 
 > [!IMPORTANT]
-> This repository contains the engineering foundation. It does not contain a working video conversion pipeline yet.
+> The repository contains an experimental local alpha.
+> Review each generated step before use.
 
 ## Product goal
 
 The product must make each generated step easy to verify.
 Each step must include a timestamp, visual evidence, confidence data, and a review state.
 
-The first release will process user-owned video files.
-It will support narrated and silent screen recordings.
-It will export Markdown, HTML, and structured JSON.
+The alpha processes user-owned video files.
+It exports Markdown, Hypertext Markup Language (HTML), and structured JavaScript Object Notation (JSON).
+
+Narrated-video smoke tests pass.
+Silent-video quality does not yet meet a release gate.
 
 ## Product difference
 
@@ -31,16 +34,15 @@ The product will:
 - Let the user correct the result before export.
 - Use replaceable model and platform adapters.
 
-## Planned local pipeline
+## Local alpha pipeline
 
 ```text
 Video file
   |
   +-- FFmpeg: media inspection and extraction
-  +-- whisper.cpp: narrated speech and timestamps
-  +-- PySceneDetect: scene and motion candidates
-  +-- PaddleOCR: text visible in frames
-  +-- Qwen3-VL through MLX-VLM: visual step analysis
+  +-- faster-whisper: narrated speech and timestamps
+  +-- Fixed windows: candidate frame selection
+  +-- Qwen3-VL through MLX-VLM: visual step proposals
   |
 Evidence merge and verification
   |
@@ -91,15 +93,43 @@ python scripts/check_ste.py
 ```
 
 The `validate` command checks a guide against the public JSON schema.
-Video processing commands will arrive in a later milestone.
+The `inspect` command returns local video facts.
+The `generate` command creates a local illustrated guide.
+
+Run a fast file test without model inference:
+
+```bash
+ovg generate /path/to/tutorial.mp4 \
+  --output outputs/my-first-guide \
+  --profile frame-only
+```
+
+Install the local model dependencies:
+
+```bash
+python -m pip install -e ".[dev,local-ai,mcp]"
+```
+
+Run the local Artificial Intelligence (AI) profile:
+
+```bash
+ovg generate /path/to/tutorial.mp4 \
+  --output outputs/my-ai-guide \
+  --profile local-ai
+```
+
+See [the local alpha test](docs/LOCAL_TEST.md) for complete instructions.
 
 The benchmark validator checks public records without the source videos.
 Use its media option to check local source digests.
 
 ## Development status
 
-The project is in phase 0.
-The repository now defines scope, contracts, quality gates, and contribution rules.
+The project has a testable alpha pipeline.
+The complete benchmark and silent-video release gates remain open.
+
+The local Model Context Protocol adapter exposes two tested tools.
+Odysseus setup is prepared, but its authenticated integration test remains open.
 
 See these documents:
 

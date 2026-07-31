@@ -16,6 +16,9 @@
 | R-12 | An MCP tool exposes a private job | Low | Critical | Enforce ownership in the service | Security reviewer |
 | R-13 | One reviewer introduces annotation bias | High | Medium | Require two reviewers before benchmark scoring | AI engineer |
 | R-14 | A generated physical guide causes injury | Medium | Critical | Add warnings and exclude safety certification | Product owner |
+| R-15 | An MCP client requests an unauthorized local path | Medium | Critical | Require approved input and output roots | Security reviewer |
+| R-16 | A model download uses excessive storage or network data | Medium | Medium | Show model size and keep a small default | AI engineer |
+| R-17 | A job overwrites files from another application | Low | High | Require a product marker in a reused output directory | Software engineer |
 
 Review this register at each stage gate.
 Add a risk when a change adds a new trust boundary.
