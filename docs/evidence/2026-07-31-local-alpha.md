@@ -22,7 +22,10 @@ HTML means Hypertext Markup Language.
 | List MCP tools | Pass | Client found `inspect_video` and `create_guide` |
 | Call both MCP tools | Pass | Both local tool calls completed |
 | Start Odysseus | Pass | Native application answered at `127.0.0.1:7860` |
-| Test inside Odysseus | Blocked | The browser session requires user authentication |
+| Connect the MCP server in Odysseus | Pass | One server connected with two product tools |
+| Inspect video in Odysseus | Pass | Odysseus returned duration, codec, digest, and support data |
+| Create a frame-only guide in Odysseus | Pass | Two steps and four output files created |
+| Create a local-AI guide in Odysseus | Pass | Two steps and four output files created |
 
 ## Pipeline result
 
@@ -34,6 +37,17 @@ The guide and its manifest passed schema validation.
 
 The manifest recorded no model response problems.
 Every step kept the `unreviewed` review state.
+
+## Odysseus result
+
+The Odysseus agent called `inspect_video` through the registered MCP server.
+The result reported a 58,767-millisecond Theora video.
+The result included source digest `7631c751acd8410cd27b125ddba73a5b7326049b38af61ddb8e658d00665a6bc`.
+
+The `frame-only` job used identifier `434653bc-33db-4b92-874c-0ca815d8bc4f`.
+The `local-ai` job used identifier `87d1f09a-01ee-46c2-ae08-ca6dbddb056c`.
+Each job created two steps.
+Each manifest recorded no problems.
 
 ## Model result
 
@@ -69,4 +83,6 @@ They are not release targets.
 
 .venv/bin/python scripts/smoke_mcp.py \
   benchmark/raw/short-form-mobile-screencast.ogv
+
+.venv/bin/python scripts/odysseus_test_driver.py
 ```

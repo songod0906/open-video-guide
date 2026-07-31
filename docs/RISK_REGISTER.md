@@ -19,6 +19,7 @@
 | R-15 | An MCP client requests an unauthorized local path | Medium | Critical | Require approved input and output roots | Security reviewer |
 | R-16 | A model download uses excessive storage or network data | Medium | Medium | Show model size and keep a small default | AI engineer |
 | R-17 | A job overwrites files from another application | Low | High | Require a product marker in a reused output directory | Software engineer |
+| R-18 | A test driver performs an unintended administration call | Low | High | Bind locally and use fixed test actions | Software engineer |
 
 Review this register at each stage gate.
 Add a risk when a change adds a new trust boundary.
