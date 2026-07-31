@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import uuid
 from pathlib import Path
+from types import SimpleNamespace
 from typing import Any
 
 import pytest
@@ -57,7 +58,7 @@ def client(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> Any:
         source_path: Path,
         output_directory: Path,
         **_: Any,
-    ) -> None:
+    ) -> Any:
         assert source_path.read_bytes() == b"video-data"
         (output_directory / "screenshots").mkdir(parents=True)
         guide = _guide()
@@ -66,6 +67,7 @@ def client(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> Any:
         render_json(guide, output_directory / "guide.json")
         render_markdown(guide, output_directory / "guide.md")
         render_html(guide, output_directory / "guide.html")
+        return SimpleNamespace(guide_json=output_directory / "guide.json")
 
     monkeypatch.setattr(web_app, "generate_guide", fake_generate)
     app = web_app.create_app(tmp_path / "local-data")
@@ -161,8 +163,8 @@ def test_replace_frame_uses_the_source_video(
     )
     assert response.status_code == 200
     updated = response.json()["steps"][0]
-    assert captured == {"source_name": "tutorial.mp4", "timestamp_ms": 6200}
-    assert updated["screenshot_path"].startswith("screenshots/review-")
+    assert captured == {"source_name": "source-video", "timestamp_ms": 6200}
+    assert updated["screenshot_path"] == "screenshots/review-step-001.png"
     assert updated["review_state"] == "changed"
     assert updated["evidence"][0]["start_ms"] == 6200
 

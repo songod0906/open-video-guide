@@ -20,6 +20,7 @@ ALLOWED_VIDEO_SUFFIXES = {".avi", ".mkv", ".mov", ".mp4", ".ogv", ".webm"}
 DEFAULT_MAXIMUM_UPLOAD_BYTES = 4 * 1024 * 1024 * 1024
 JOB_ID_PATTERN = re.compile(r"^[0-9a-f-]{36}$")
 REVIEW_STATES = {"accepted", "changed", "rejected", "unreviewed"}
+STORED_SOURCE_NAME = "source-video"
 
 
 def _now() -> str:
@@ -59,10 +60,23 @@ class JobStore:
             raise KeyError("The job identifier is invalid.") from error
         if canonical_id != job_id or not JOB_ID_PATTERN.fullmatch(job_id):
             raise KeyError("The job identifier is invalid.")
-        path = (self.jobs_root / canonical_id).resolve()
-        if not path.is_relative_to(self.jobs_root):
-            raise KeyError("The job identifier is invalid.")
-        return path
+        for candidate in self.jobs_root.iterdir():
+            if candidate.name == canonical_id and candidate.is_dir():
+                path = candidate.resolve()
+                if path.is_relative_to(self.jobs_root):
+                    return path
+        raise KeyError("The job does not exist.")
+
+    def create_job_directory(self) -> tuple[str, Path]:
+        """Create a directory with a generated job identifier."""
+        while True:
+            job_id = str(uuid.uuid4())
+            path = self.jobs_root / job_id
+            try:
+                path.mkdir()
+            except FileExistsError:
+                continue
+            return job_id, path
 
     def read_job(self, job_id: str) -> dict[str, Any]:
         """Read one job record."""
@@ -120,11 +134,10 @@ class JobStore:
         if not 2 <= len(language) <= 12:
             raise ValueError("The language code is invalid.")
 
-        job_id = str(uuid.uuid4())
-        job_directory = self.job_directory(job_id)
+        job_id, job_directory = self.create_job_directory()
         source_directory = job_directory / "source"
-        source_directory.mkdir(parents=True)
-        source_path = source_directory / file_name
+        source_directory.mkdir()
+        source_path = source_directory / STORED_SOURCE_NAME
         byte_count = 0
         try:
             with source_path.open("xb") as target:
@@ -146,7 +159,7 @@ class JobStore:
             "job_id": job_id,
             "state": "queued",
             "source_file_name": file_name,
-            "stored_file_name": file_name,
+            "stored_file_name": STORED_SOURCE_NAME,
             "source_size_bytes": byte_count,
             "model_profile": model_profile,
             "language": language,
@@ -170,7 +183,7 @@ class JobStore:
         source_path = self.source_path(job_id)
         output_directory = job_directory / "output"
         try:
-            generate_guide(
+            result = generate_guide(
                 source_path,
                 output_directory,
                 profile=job["model_profile"],
@@ -178,6 +191,12 @@ class JobStore:
                 window_seconds=job["window_seconds"],
                 maximum_steps=job["maximum_steps"],
             )
+            guide = load_guide(result.guide_json)
+            guide["source"]["file_name"] = job["source_file_name"]
+            errors = validation_errors(guide)
+            if errors:
+                raise RuntimeError("The stored guide is invalid: " + "; ".join(errors))
+            self._write_exports(job_id, guide)
         except Exception as error:
             job["state"] = "failed"
             job["error"] = str(error)[:1000]
@@ -283,7 +302,8 @@ class JobStore:
             step = next((item for item in guide["steps"] if item["step_id"] == step_id), None)
             if step is None:
                 raise KeyError("The step does not exist.")
-            relative_path = Path("screenshots") / f"review-{step_id}.png"
+            frame_slot = guide["steps"].index(step) + 1
+            relative_path = Path("screenshots") / f"review-step-{frame_slot:03d}.png"
             target_path = self.job_directory(job_id) / "output" / relative_path
             extract_frame(self.source_path(job_id), timestamp_ms, target_path)
             step["screenshot_path"] = relative_path.as_posix()
