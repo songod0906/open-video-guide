@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0",
+  "guide_id": "90c65d27-a3e1-4e6e-9d94-2370690459be",
+  "title": "Create a sample project",
+  "language": "en",
+  "source": {
+    "file_name": "synthetic-tutorial.mp4",
+    "duration_ms": 42000,
+    "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+  },
+  "steps": [
+    {
+      "step_id": "13020ea5-eae4-44ad-858f-c60c5e09c589",
+      "order": 1,
+      "title": "Open the project menu",
+      "instruction": "Select File. Then, select New Project.",
+      "start_ms": 5200,
+      "end_ms": 8900,
+      "screenshot_path": "screenshots/step-001.webp",
+      "confidence": 0.93,
+      "review_state": "unreviewed",
+      "evidence": [
+        {
+          "kind": "frame",
+          "start_ms": 6700,
+          "end_ms": 6700,
+          "asset_path": "frames/frame-000067.webp"
+        },
+        {
+          "kind": "ocr",
+          "start_ms": 6400,
+          "end_ms": 7200,
+          "text": "File New Project"
+        }
+      ]
+    }
+  ]
+}

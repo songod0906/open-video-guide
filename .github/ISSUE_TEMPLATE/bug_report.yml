@@ -1,0 +1,46 @@
+name: Defect report
+description: Report a repeatable product defect.
+title: "[Defect] "
+labels: ["type: defect", "state: triage"]
+body:
+  - type: markdown
+    attributes:
+      value: Do not include private video, tokens, or personal data.
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Expected result
+      description: State the result that you expected.
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual result
+      description: State the result that occurred.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Reproduction steps
+      description: Give the smallest safe procedure.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+    validations:
+      required: true
+  - type: textarea
+    id: system
+    attributes:
+      label: System and model profile
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Redacted evidence
+      description: Add safe logs or screenshots when they are useful.

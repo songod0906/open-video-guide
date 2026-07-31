@@ -1,0 +1,36 @@
+name: Feature proposal
+description: Propose one product outcome.
+title: "[Feature] "
+labels: ["type: feature", "state: triage"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: User problem
+      description: Identify the user and the blocked task.
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Required outcome
+      description: State the result without selecting an implementation.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+    validations:
+      required: true
+  - type: textarea
+    id: risks
+    attributes:
+      label: Security, privacy, data, and license effects
+    validations:
+      required: true
+  - type: textarea
+    id: exclusions
+    attributes:
+      label: Exclusions
+      description: State what this proposal does not include.

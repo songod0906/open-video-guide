@@ -1,0 +1,58 @@
+# Operating system
+.DS_Store
+Thumbs.db
+
+# Editors
+.idea/
+.vscode/
+*.swp
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+dist/
+build/
+
+# Secrets and local settings
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Models and caches
+models/
+weights/
+.cache/
+*.gguf
+*.safetensors
+*.onnx
+
+# User media and generated data
+data/
+uploads/
+inputs/
+outputs/
+artifacts/
+screenshots/
+logs/
+*.mp4
+*.mov
+*.mkv
+*.webm
+*.avi
+*.wav
+*.mp3
+
+# Local databases
+*.db
+*.sqlite
+*.sqlite3

@@ -1,0 +1,41 @@
+name: Model evaluation
+description: Propose or report one model profile.
+title: "[Model] "
+labels: ["area: ai", "state: triage"]
+body:
+  - type: input
+    id: model
+    attributes:
+      label: Exact model and revision
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Source URL
+    validations:
+      required: true
+  - type: input
+    id: license
+    attributes:
+      label: Exact license
+    validations:
+      required: true
+  - type: textarea
+    id: system
+    attributes:
+      label: Test system and runtime
+    validations:
+      required: true
+  - type: textarea
+    id: metrics
+    attributes:
+      label: Benchmark result
+    validations:
+      required: true
+  - type: textarea
+    id: limits
+    attributes:
+      label: Known limits
+    validations:
+      required: true
