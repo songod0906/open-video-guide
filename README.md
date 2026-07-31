@@ -74,6 +74,7 @@ See [docs/INTEGRATIONS.md](docs/INTEGRATIONS.md) for the verified plan.
 | `src/open_video_guide` | Stable Python contracts and future engine code |
 | `schemas` | Versioned interchange contracts |
 | `examples` | Synthetic contract examples |
+| `benchmark` | Public benchmark records and provisional annotations |
 | `docs` | Product and engineering records |
 | `.github` | Review, issue, dependency, and continuous integration controls |
 
@@ -84,12 +85,16 @@ Use Python 3.11 or a later compatible version.
 ```bash
 python -m pip install -e ".[dev]"
 ovg validate examples/example-guide.json
+python scripts/validate_benchmark.py
 pytest
 python scripts/check_ste.py
 ```
 
 The `validate` command checks a guide against the public JSON schema.
 Video processing commands will arrive in a later milestone.
+
+The benchmark validator checks public records without the source videos.
+Use its media option to check local source digests.
 
 ## Development status
 

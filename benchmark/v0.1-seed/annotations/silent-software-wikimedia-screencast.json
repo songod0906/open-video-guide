@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0",
+  "benchmark_id": "silent-software-wikimedia-screencast",
+  "source_sha256": "2aa42efc883969c3ca77667c104af5f7722f390c8732a337e61a3d14dd659744",
+  "review": {
+    "status": "seed_single_review",
+    "reviewer_count": 1,
+    "reviewed_at": "2026-07-31",
+    "method": "Visual review of the silent benchmark source"
+  },
+  "steps": [
+    {
+      "step_id": "step-01",
+      "order": 1,
+      "title": "Open the task",
+      "instruction": "Open the Phabricator task and select the edit action.",
+      "start_ms": 0,
+      "end_ms": 15000,
+      "screenshot": {
+        "time_ms": 10000,
+        "region": {
+          "x": 0.02,
+          "y": 0.05,
+          "width": 0.96,
+          "height": 0.9
+        }
+      }
+    },
+    {
+      "step_id": "step-02",
+      "order": 2,
+      "title": "Update task fields",
+      "instruction": "Update the task title, assignee, priority, and project fields.",
+      "start_ms": 15000,
+      "end_ms": 50000,
+      "screenshot": {
+        "time_ms": 35000,
+        "region": {
+          "x": 0.22,
+          "y": 0.08,
+          "width": 0.7,
+          "height": 0.72
+        }
+      }
+    },
+    {
+      "step_id": "step-03",
+      "order": 3,
+      "title": "Add the description",
+      "instruction": "Enter the task description in the text editor.",
+      "start_ms": 50000,
+      "end_ms": 70000,
+      "screenshot": {
+        "time_ms": 65000,
+        "region": {
+          "x": 0.22,
+          "y": 0.45,
+          "width": 0.7,
+          "height": 0.42
+        }
+      }
+    },
+    {
+      "step_id": "step-04",
+      "order": 4,
+      "title": "Save the task",
+      "instruction": "Save the task and verify the updated task page.",
+      "start_ms": 70000,
+      "end_ms": 87125,
+      "screenshot": {
+        "time_ms": 82000,
+        "region": {
+          "x": 0.02,
+          "y": 0.05,
+          "width": 0.96,
+          "height": 0.9
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,183 @@
+{
+  "schema_version": "1.0",
+  "benchmark_id": "physical-rope-bowline",
+  "source_sha256": "c6ba490bfdb624abedf28f5c78d6df3755e62314218bc4f4f30ba79ab2b7f3aa",
+  "review": {
+    "status": "seed_single_review",
+    "reviewer_count": 1,
+    "reviewed_at": "2026-07-31",
+    "method": "Visual review with local Whisper transcript support"
+  },
+  "steps": [
+    {
+      "step_id": "step-01",
+      "order": 1,
+      "title": "Pass a bight through the eye",
+      "instruction": "Fold the rope at its middle and pass the bight through the eye.",
+      "start_ms": 89500,
+      "end_ms": 99670,
+      "screenshot": {
+        "time_ms": 96000,
+        "region": {
+          "x": 0.12,
+          "y": 0.08,
+          "width": 0.76,
+          "height": 0.84
+        }
+      }
+    },
+    {
+      "step_id": "step-02",
+      "order": 2,
+      "title": "Form the bowline",
+      "instruction": "Form the bowline loop with one side of the bight.",
+      "start_ms": 99670,
+      "end_ms": 115070,
+      "screenshot": {
+        "time_ms": 107000,
+        "region": {
+          "x": 0.12,
+          "y": 0.08,
+          "width": 0.76,
+          "height": 0.84
+        }
+      }
+    },
+    {
+      "step_id": "step-03",
+      "order": 3,
+      "title": "Add the Yosemite finish",
+      "instruction": "Follow the working bight around the standing part and through the knot.",
+      "start_ms": 115550,
+      "end_ms": 149150,
+      "screenshot": {
+        "time_ms": 135000,
+        "region": {
+          "x": 0.12,
+          "y": 0.08,
+          "width": 0.76,
+          "height": 0.84
+        }
+      }
+    },
+    {
+      "step_id": "step-04",
+      "order": 4,
+      "title": "Make a tensioning loop",
+      "instruction": "Make a sheepshank loop in the other side of the rope.",
+      "start_ms": 150830,
+      "end_ms": 179050,
+      "screenshot": {
+        "time_ms": 165000,
+        "region": {
+          "x": 0.12,
+          "y": 0.08,
+          "width": 0.76,
+          "height": 0.84
+        }
+      }
+    },
+    {
+      "step_id": "step-05",
+      "order": 5,
+      "title": "Tension the rope",
+      "instruction": "Route the loop for mechanical advantage and pull the rope tight.",
+      "start_ms": 179850,
+      "end_ms": 195740,
+      "screenshot": {
+        "time_ms": 188000,
+        "region": {
+          "x": 0.08,
+          "y": 0.08,
+          "width": 0.84,
+          "height": 0.84
+        }
+      }
+    },
+    {
+      "step_id": "step-06",
+      "order": 6,
+      "title": "Tie the second bowline",
+      "instruction": "Tie a second bowline with a bight and add its Yosemite finish.",
+      "start_ms": 196140,
+      "end_ms": 237890,
+      "screenshot": {
+        "time_ms": 220000,
+        "region": {
+          "x": 0.12,
+          "y": 0.08,
+          "width": 0.76,
+          "height": 0.84
+        }
+      }
+    },
+    {
+      "step_id": "step-07",
+      "order": 7,
+      "title": "Check independent tension",
+      "instruction": "Pull each line and confirm that one line does not loosen the other.",
+      "start_ms": 237970,
+      "end_ms": 246450,
+      "screenshot": {
+        "time_ms": 242000,
+        "region": {
+          "x": 0.06,
+          "y": 0.08,
+          "width": 0.88,
+          "height": 0.84
+        }
+      }
+    },
+    {
+      "step_id": "step-08",
+      "order": 8,
+      "title": "Release the loaded knot",
+      "instruction": "Release the Yosemite finish and undo the bowline after loading.",
+      "start_ms": 247090,
+      "end_ms": 341510,
+      "screenshot": {
+        "time_ms": 325000,
+        "region": {
+          "x": 0.12,
+          "y": 0.08,
+          "width": 0.76,
+          "height": 0.84
+        }
+      }
+    },
+    {
+      "step_id": "step-09",
+      "order": 9,
+      "title": "Use the method with thick rope",
+      "instruction": "Repeat the bowline method when a thick rope fills the eye.",
+      "start_ms": 347400,
+      "end_ms": 407830,
+      "screenshot": {
+        "time_ms": 390000,
+        "region": {
+          "x": 0.12,
+          "y": 0.08,
+          "width": 0.76,
+          "height": 0.84
+        }
+      }
+    },
+    {
+      "step_id": "step-10",
+      "order": 10,
+      "title": "Tie the quick form",
+      "instruction": "Pass the bight through the eye and tie the simple bowline form.",
+      "start_ms": 416690,
+      "end_ms": 438050,
+      "screenshot": {
+        "time_ms": 430000,
+        "region": {
+          "x": 0.12,
+          "y": 0.08,
+          "width": 0.76,
+          "height": 0.84
+        }
+      }
+    }
+  ]
+}

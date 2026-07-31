@@ -14,3 +14,4 @@ check: lint test validate
 
 validate:
 	ovg validate examples/example-guide.json
+	python scripts/validate_benchmark.py

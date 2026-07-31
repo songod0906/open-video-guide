@@ -1,0 +1,165 @@
+{
+  "schema_version": "1.0",
+  "benchmark_version": "0.1-seed",
+  "name": "Open Video Guide Seed Benchmark",
+  "created_at": "2026-07-31",
+  "status": "seed",
+  "target_items_per_category": 5,
+  "records": [
+    {
+      "id": "narrated-software-cite-video",
+      "title": "Cite a Video in a Wikipedia Article",
+      "category": "narrated_software",
+      "language": "en",
+      "speech": true,
+      "source": {
+        "page_url": "https://commons.wikimedia.org/wiki/File:Tutorial_on_how_to_cite_video_in_Wikipedia_articles.webm",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/c/cb/Tutorial_on_how_to_cite_video_in_Wikipedia_articles.webm/Tutorial_on_how_to_cite_video_in_Wikipedia_articles.webm.480p.vp9.webm",
+        "author": "85jesse",
+        "source_statement": "Own work",
+        "license": {
+          "identifier": "CC0-1.0",
+          "name": "CC0 1.0 Universal",
+          "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "attribution_required": false,
+          "share_alike": false
+        },
+        "original_sha1": "468d3f6e835836bb6b60c3c0ac71cdc444846ed0",
+        "retrieved_at": "2026-07-31"
+      },
+      "media": {
+        "file_name": "narrated-software-cite-video.webm",
+        "sha256": "0fc950ad8aedcae6feffd25996e6a50237416760bd5d96722ee92dd68941298c",
+        "size_bytes": 15920265,
+        "duration_ms": 235491,
+        "width_px": 834,
+        "height_px": 480,
+        "video_codec": "vp9",
+        "audio": {
+          "present": true,
+          "codec": "opus"
+        },
+        "transformations": [
+          "Used the Wikimedia Commons 480p VP9 transcode."
+        ]
+      },
+      "annotation_path": "annotations/narrated-software-cite-video.json"
+    },
+    {
+      "id": "silent-software-wikimedia-screencast",
+      "title": "Edit a Phabricator Task",
+      "category": "silent_software",
+      "language": "en",
+      "speech": false,
+      "source": {
+        "page_url": "https://commons.wikimedia.org/wiki/File:Wikimedia_Screencast.webm",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/8/8f/Wikimedia_Screencast.webm/Wikimedia_Screencast.webm.480p.vp9.webm",
+        "author": "Toolboxx8",
+        "source_statement": "Own work",
+        "license": {
+          "identifier": "CC-BY-SA-4.0",
+          "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+          "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "attribution_required": true,
+          "share_alike": true
+        },
+        "original_sha1": "249a100e6ab27e55e0096162eafcbf97ee27a033",
+        "retrieved_at": "2026-07-31"
+      },
+      "media": {
+        "file_name": "silent-software-wikimedia-screencast.webm",
+        "sha256": "2aa42efc883969c3ca77667c104af5f7722f390c8732a337e61a3d14dd659744",
+        "size_bytes": 538279,
+        "duration_ms": 87125,
+        "width_px": 640,
+        "height_px": 480,
+        "video_codec": "vp9",
+        "audio": {
+          "present": false,
+          "codec": null
+        },
+        "transformations": [
+          "Used the Wikimedia Commons 480p VP9 transcode.",
+          "Removed the audio stream with FFmpeg 8.1.1."
+        ]
+      },
+      "annotation_path": "annotations/silent-software-wikimedia-screencast.json"
+    },
+    {
+      "id": "physical-rope-bowline",
+      "title": "Tie the Middle of a Rope to an Eye",
+      "category": "physical",
+      "language": "en",
+      "speech": true,
+      "source": {
+        "page_url": "https://commons.wikimedia.org/wiki/File:Tying_off_onto_the_middle_of_a_rope.webm",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/c/c3/Tying_off_onto_the_middle_of_a_rope.webm/Tying_off_onto_the_middle_of_a_rope.webm.480p.vp9.webm",
+        "author": "Slashme",
+        "source_statement": "Own work",
+        "license": {
+          "identifier": "CC-BY-SA-4.0",
+          "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+          "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "attribution_required": true,
+          "share_alike": true
+        },
+        "original_sha1": "e54718eca082307590c7e570e560bc9803219df3",
+        "retrieved_at": "2026-07-31"
+      },
+      "media": {
+        "file_name": "physical-rope-bowline.webm",
+        "sha256": "c6ba490bfdb624abedf28f5c78d6df3755e62314218bc4f4f30ba79ab2b7f3aa",
+        "size_bytes": 34378332,
+        "duration_ms": 441263,
+        "width_px": 854,
+        "height_px": 480,
+        "video_codec": "vp9",
+        "audio": {
+          "present": true,
+          "codec": "opus"
+        },
+        "transformations": [
+          "Used the Wikimedia Commons 480p VP9 transcode."
+        ]
+      },
+      "annotation_path": "annotations/physical-rope-bowline.json"
+    },
+    {
+      "id": "short-form-mobile-screencast",
+      "title": "Demonstrate Mobile Wikipedia Screen Capture",
+      "category": "short_form",
+      "language": "en",
+      "speech": true,
+      "source": {
+        "page_url": "https://commons.wikimedia.org/wiki/File:Awesome_Mobile_Screen_Cast.ogv",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Awesome_Mobile_Screen_Cast.ogv",
+        "author": "LauraHale",
+        "source_statement": "Own work",
+        "license": {
+          "identifier": "CC-BY-3.0",
+          "name": "Creative Commons Attribution 3.0 Unported",
+          "url": "https://creativecommons.org/licenses/by/3.0/",
+          "attribution_required": true,
+          "share_alike": false
+        },
+        "original_sha1": "17871d742d8bf276d18357d26089093f2b6df5b2",
+        "retrieved_at": "2026-07-31"
+      },
+      "media": {
+        "file_name": "short-form-mobile-screencast.ogv",
+        "sha256": "7631c751acd8410cd27b125ddba73a5b7326049b38af61ddb8e658d00665a6bc",
+        "size_bytes": 4082618,
+        "duration_ms": 58767,
+        "width_px": 480,
+        "height_px": 360,
+        "video_codec": "theora",
+        "audio": {
+          "present": true,
+          "codec": "vorbis"
+        },
+        "transformations": []
+      },
+      "annotation_path": "annotations/short-form-mobile-screencast.json"
+    }
+  ]
+}

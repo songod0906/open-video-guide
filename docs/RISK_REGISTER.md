@@ -14,6 +14,7 @@
 | R-10 | Technical text does not obey STE | Medium | Medium | Use checks and trained review | Technical writer |
 | R-11 | Confidence is not calibrated | Medium | High | Measure calibration on held-out data | AI engineer |
 | R-12 | An MCP tool exposes a private job | Low | Critical | Enforce ownership in the service | Security reviewer |
+| R-13 | One reviewer introduces annotation bias | High | Medium | Require two reviewers before benchmark scoring | AI engineer |
 
 Review this register at each stage gate.
 Add a risk when a change adds a new trust boundary.

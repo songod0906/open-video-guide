@@ -40,3 +40,6 @@ jobs:
 
       - name: Validate the example contract
         run: ovg validate examples/example-guide.json
+
+      - name: Validate the seed benchmark
+        run: python scripts/validate_benchmark.py

@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "benchmark_id": "short-form-mobile-screencast",
+  "source_sha256": "7631c751acd8410cd27b125ddba73a5b7326049b38af61ddb8e658d00665a6bc",
+  "review": {
+    "status": "seed_single_review",
+    "reviewer_count": 1,
+    "reviewed_at": "2026-07-31",
+    "method": "Visual review with local Whisper transcript support"
+  },
+  "steps": [
+    {
+      "step_id": "step-01",
+      "order": 1,
+      "title": "Prepare two mobile devices",
+      "instruction": "Use one connected phone and one mobile device with a camera.",
+      "start_ms": 1360,
+      "end_ms": 34660,
+      "screenshot": {
+        "time_ms": 32000,
+        "region": {
+          "x": 0.3,
+          "y": 0.28,
+          "width": 0.66,
+          "height": 0.68
+        }
+      }
+    },
+    {
+      "step_id": "step-02",
+      "order": 2,
+      "title": "Show the Wikipedia article",
+      "instruction": "Record the first phone while it shows a Wikipedia article.",
+      "start_ms": 34660,
+      "end_ms": 44660,
+      "screenshot": {
+        "time_ms": 40000,
+        "region": {
+          "x": 0.24,
+          "y": 0.22,
+          "width": 0.72,
+          "height": 0.74
+        }
+      }
+    },
+    {
+      "step_id": "step-03",
+      "order": 3,
+      "title": "Show article actions",
+      "instruction": "Show viewers how to inspect article history and edit the article.",
+      "start_ms": 44660,
+      "end_ms": 58767,
+      "screenshot": {
+        "time_ms": 52000,
+        "region": {
+          "x": 0.24,
+          "y": 0.22,
+          "width": 0.72,
+          "height": 0.74
+        }
+      }
+    }
+  ]
+}

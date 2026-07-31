@@ -1,0 +1,252 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://open-video-guide.org/benchmark/schemas/manifest.schema.json",
+  "title": "Open Video Guide Benchmark Manifest",
+  "description": "A versioned list of benchmark source videos.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "benchmark_version",
+    "name",
+    "created_at",
+    "status",
+    "target_items_per_category",
+    "records"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "benchmark_version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+(?:-[a-z]+)?$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 120
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date"
+    },
+    "status": {
+      "enum": [
+        "seed",
+        "review",
+        "released"
+      ]
+    },
+    "target_items_per_category": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "records": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/record"
+      }
+    }
+  },
+  "$defs": {
+    "license": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "identifier",
+        "name",
+        "url",
+        "attribution_required",
+        "share_alike"
+      ],
+      "properties": {
+        "identifier": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "attribution_required": {
+          "type": "boolean"
+        },
+        "share_alike": {
+          "type": "boolean"
+        }
+      }
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "page_url",
+        "download_url",
+        "author",
+        "source_statement",
+        "license",
+        "original_sha1",
+        "retrieved_at"
+      ],
+      "properties": {
+        "page_url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "download_url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "author": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_statement": {
+          "type": "string",
+          "minLength": 1
+        },
+        "license": {
+          "$ref": "#/$defs/license"
+        },
+        "original_sha1": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{40}$"
+        },
+        "retrieved_at": {
+          "type": "string",
+          "format": "date"
+        }
+      }
+    },
+    "audio": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "present",
+        "codec"
+      ],
+      "properties": {
+        "present": {
+          "type": "boolean"
+        },
+        "codec": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "media": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "file_name",
+        "sha256",
+        "size_bytes",
+        "duration_ms",
+        "width_px",
+        "height_px",
+        "video_codec",
+        "audio",
+        "transformations"
+      ],
+      "properties": {
+        "file_name": {
+          "type": "string",
+          "pattern": "^[^/]+$"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "size_bytes": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "duration_ms": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "width_px": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "height_px": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "video_codec": {
+          "type": "string",
+          "minLength": 1
+        },
+        "audio": {
+          "$ref": "#/$defs/audio"
+        },
+        "transformations": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "record": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "title",
+        "category",
+        "language",
+        "speech",
+        "source",
+        "media",
+        "annotation_path"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160
+        },
+        "category": {
+          "enum": [
+            "narrated_software",
+            "silent_software",
+            "physical",
+            "short_form"
+          ]
+        },
+        "language": {
+          "type": "string",
+          "pattern": "^[a-z]{2}$"
+        },
+        "speech": {
+          "type": "boolean"
+        },
+        "source": {
+          "$ref": "#/$defs/source"
+        },
+        "media": {
+          "$ref": "#/$defs/media"
+        },
+        "annotation_path": {
+          "type": "string",
+          "pattern": "^annotations/[a-z0-9-]+\\.json$"
+        }
+      }
+    }
+  }
+}

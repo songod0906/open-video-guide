@@ -44,10 +44,12 @@ outputs/
 artifacts/
 screenshots/
 logs/
+benchmark/raw/
 *.mp4
 *.mov
 *.mkv
 *.webm
+*.ogv
 *.avi
 *.wav
 *.mp3
