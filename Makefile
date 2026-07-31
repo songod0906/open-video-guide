@@ -1,4 +1,4 @@
-.PHONY: setup lint test check validate
+.PHONY: setup lint test check validate web
 
 setup:
 	python -m pip install -e ".[dev]"
@@ -15,3 +15,6 @@ check: lint test validate
 validate:
 	ovg validate examples/example-guide.json
 	python scripts/validate_benchmark.py
+
+web:
+	ovg-web

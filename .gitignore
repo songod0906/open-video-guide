@@ -13,6 +13,7 @@ __pycache__/
 *.egg-info/
 .pytest_cache/
 .ruff_cache/
+.playwright-cli/
 .mypy_cache/
 .coverage
 htmlcov/
@@ -37,6 +38,7 @@ weights/
 *.onnx
 
 # User media and generated data
+.ovg-data/
 data/
 uploads/
 inputs/

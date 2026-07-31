@@ -16,6 +16,7 @@ Each step must include a timestamp, visual evidence, confidence data, and a revi
 
 The alpha processes user-owned video files.
 It exports Markdown, Hypertext Markup Language (HTML), and structured JavaScript Object Notation (JSON).
+The local editor lets users correct and export each guide.
 
 Narrated-video smoke tests pass.
 Silent-video quality does not yet meet a release gate.
@@ -120,6 +121,34 @@ ovg generate /path/to/tutorial.mp4 \
 
 See [the local alpha test](docs/LOCAL_TEST.md) for complete instructions.
 
+## Local review editor
+
+Install the local web adapter:
+
+```bash
+python -m pip install -e ".[web]"
+```
+
+Start the editor:
+
+```bash
+ovg-web
+```
+
+Open `http://127.0.0.1:8765` in a browser.
+Select the fast draft to test without a model.
+
+Install the local model dependencies for the local AI draft:
+
+```bash
+python -m pip install -e ".[web,local-ai]"
+```
+
+The editor stores private job data in `.ovg-data`.
+Git ignores this directory.
+
+See [the local editor guide](docs/LOCAL_EDITOR.md) for the complete workflow.
+
 The benchmark validator checks public records without the source videos.
 Use its media option to check local source digests.
 
@@ -129,7 +158,8 @@ The project has a testable alpha pipeline.
 The complete benchmark and silent-video release gates remain open.
 
 The local Model Context Protocol adapter exposes two tested tools.
-Odysseus setup is prepared, but its authenticated integration test remains open.
+The Odysseus integration passed local tests with both model profiles.
+The local review editor passed its service and browser tests.
 
 See these documents:
 

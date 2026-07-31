@@ -33,12 +33,13 @@ def render_markdown(guide: dict[str, Any], target_path: Path) -> None:
         "> Review every step before you use this guide.",
         "",
     ]
-    for step in guide["steps"]:
+    visible_steps = [step for step in guide["steps"] if step["review_state"] != "rejected"]
+    for display_order, step in enumerate(visible_steps, start=1):
         lines.extend(
             [
-                f"## {step['order']}. {step['title']}",
+                f"## {display_order}. {step['title']}",
                 "",
-                f"![Step {step['order']}]({step['screenshot_path']})",
+                f"![Step {display_order}]({step['screenshot_path']})",
                 "",
                 step["instruction"],
                 "",
@@ -54,15 +55,16 @@ def render_markdown(guide: dict[str, Any], target_path: Path) -> None:
 def render_html(guide: dict[str, Any], target_path: Path) -> None:
     """Write the standalone HTML guide."""
     cards = []
-    for step in guide["steps"]:
+    visible_steps = [step for step in guide["steps"] if step["review_state"] != "rejected"]
+    for display_order, step in enumerate(visible_steps, start=1):
         cards.append(
             "\n".join(
                 [
                     '<article class="step">',
-                    f"<h2>{step['order']}. {html.escape(step['title'])}</h2>",
+                    f"<h2>{display_order}. {html.escape(step['title'])}</h2>",
                     (
                         f'<img src="{html.escape(step["screenshot_path"])}" '
-                        f'alt="Evidence for step {step["order"]}">'
+                        f'alt="Evidence for step {display_order}">'
                     ),
                     f"<p>{html.escape(step['instruction'])}</p>",
                     (
