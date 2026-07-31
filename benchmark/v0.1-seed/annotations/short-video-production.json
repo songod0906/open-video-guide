@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0",
+  "benchmark_id": "short-video-production",
+  "source_sha256": "0fa98c6f69d8f9cb0f401798dd3c70bc792b99ba16558d830148800adf6022b8",
+  "review": {"status": "seed_single_review", "reviewer_count": 1, "reviewed_at": "2026-07-31", "method": "Visual review of the short-form benchmark source"},
+  "steps": [
+    {"step_id": "step-01", "order": 1, "title": "Define the concept", "instruction": "Hold an initial meeting and define the video concept.", "start_ms": 0, "end_ms": 12000, "screenshot": {"time_ms": 8000, "region": {"x": 0.03, "y": 0.05, "width": 0.94, "height": 0.9}}},
+    {"step_id": "step-02", "order": 2, "title": "Design the story", "instruction": "Create the concept design and storyboards.", "start_ms": 12000, "end_ms": 25000, "screenshot": {"time_ms": 20000, "region": {"x": 0.03, "y": 0.05, "width": 0.94, "height": 0.9}}},
+    {"step_id": "step-03", "order": 3, "title": "Build the first draft", "instruction": "Create the first draft and edit the graphic elements.", "start_ms": 25000, "end_ms": 40000, "screenshot": {"time_ms": 34000, "region": {"x": 0.03, "y": 0.05, "width": 0.94, "height": 0.9}}},
+    {"step_id": "step-04", "order": 4, "title": "Animate and mix", "instruction": "Animate the graphics and mix the audio.", "start_ms": 40000, "end_ms": 52000, "screenshot": {"time_ms": 47000, "region": {"x": 0.03, "y": 0.05, "width": 0.94, "height": 0.9}}},
+    {"step_id": "step-05", "order": 5, "title": "Deliver the video", "instruction": "Export and deliver the final video.", "start_ms": 52000, "end_ms": 57868, "screenshot": {"time_ms": 55000, "region": {"x": 0.03, "y": 0.05, "width": 0.94, "height": 0.9}}}
+  ]
+}

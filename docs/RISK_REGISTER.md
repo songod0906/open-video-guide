@@ -15,6 +15,7 @@
 | R-11 | Confidence is not calibrated | Medium | High | Measure calibration on held-out data | AI engineer |
 | R-12 | An MCP tool exposes a private job | Low | Critical | Enforce ownership in the service | Security reviewer |
 | R-13 | One reviewer introduces annotation bias | High | Medium | Require two reviewers before benchmark scoring | AI engineer |
+| R-14 | A generated physical guide causes injury | Medium | Critical | Add warnings and exclude safety certification | Product owner |
 
 Review this register at each stage gate.
 Add a risk when a change adds a new trust boundary.

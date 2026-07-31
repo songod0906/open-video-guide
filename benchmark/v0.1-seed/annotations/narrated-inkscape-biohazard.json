@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "benchmark_id": "narrated-inkscape-biohazard",
+  "source_sha256": "70208ee96a8af8074cc2967b4124d39a21d7bd3252c54c60ef5375c4aa6846b5",
+  "review": {
+    "status": "seed_single_review",
+    "reviewer_count": 1,
+    "reviewed_at": "2026-07-31",
+    "method": "Visual review with local Whisper transcript support"
+  },
+  "steps": [
+    {"step_id": "step-01", "order": 1, "title": "Draw the first circle", "instruction": "Use the circle tool with Control and Shift to draw a centered circle.", "start_ms": 34860, "end_ms": 70320, "screenshot": {"time_ms": 60000, "region": {"x": 0.05, "y": 0.08, "width": 0.9, "height": 0.84}}},
+    {"step_id": "step-02", "order": 2, "title": "Offset the duplicate", "instruction": "Duplicate the circle, reduce its size, and move it upward.", "start_ms": 72560, "end_ms": 139520, "screenshot": {"time_ms": 120000, "region": {"x": 0.05, "y": 0.08, "width": 0.9, "height": 0.84}}},
+    {"step_id": "step-03", "order": 3, "title": "Make a crescent", "instruction": "Select both circles and apply the Difference path operation.", "start_ms": 139520, "end_ms": 169040, "screenshot": {"time_ms": 160000, "region": {"x": 0.05, "y": 0.08, "width": 0.9, "height": 0.84}}},
+    {"step_id": "step-04", "order": 4, "title": "Build three arms", "instruction": "Move the rotation center, duplicate the crescent, and make two 120-degree rotations.", "start_ms": 169040, "end_ms": 255080, "screenshot": {"time_ms": 245000, "region": {"x": 0.05, "y": 0.08, "width": 0.9, "height": 0.84}}},
+    {"step_id": "step-05", "order": 5, "title": "Add the center circle", "instruction": "Draw a small centered circle in the middle of the three arms.", "start_ms": 257280, "end_ms": 286230, "screenshot": {"time_ms": 275000, "region": {"x": 0.05, "y": 0.08, "width": 0.9, "height": 0.84}}},
+    {"step_id": "step-06", "order": 6, "title": "Unite the arms", "instruction": "Select the three arms and apply the Union path operation.", "start_ms": 286230, "end_ms": 305590, "screenshot": {"time_ms": 300000, "region": {"x": 0.05, "y": 0.08, "width": 0.9, "height": 0.84}}},
+    {"step_id": "step-07", "order": 7, "title": "Create the outer ring", "instruction": "Duplicate the center circle twice and subtract the smaller circle from the larger circle.", "start_ms": 305590, "end_ms": 356030, "screenshot": {"time_ms": 350000, "region": {"x": 0.05, "y": 0.08, "width": 0.9, "height": 0.84}}},
+    {"step_id": "step-08", "order": 8, "title": "Remove the center", "instruction": "Subtract the center circle from the united arm shape.", "start_ms": 356030, "end_ms": 391200, "screenshot": {"time_ms": 375000, "region": {"x": 0.05, "y": 0.08, "width": 0.9, "height": 0.84}}},
+    {"step_id": "step-09", "order": 9, "title": "Cut the ring gap", "instruction": "Use an outset duplicate to cut a matching gap between the arms and ring.", "start_ms": 391200, "end_ms": 488150, "screenshot": {"time_ms": 480000, "region": {"x": 0.05, "y": 0.08, "width": 0.9, "height": 0.84}}},
+    {"step_id": "step-10", "order": 10, "title": "Finish the symbol", "instruction": "Unite the ring and arms, then set the final color.", "start_ms": 488150, "end_ms": 526570, "screenshot": {"time_ms": 510000, "region": {"x": 0.05, "y": 0.08, "width": 0.9, "height": 0.84}}}
+  ]
+}

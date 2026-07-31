@@ -12,10 +12,24 @@ def test_seed_benchmark_is_valid() -> None:
     assert validation_errors() == []
 
 
-def test_seed_has_each_required_category() -> None:
+def test_seed_has_five_records_in_each_category() -> None:
     manifest = json.loads(DEFAULT_MANIFEST_PATH.read_text(encoding="utf-8"))
-    categories = {record["category"] for record in manifest["records"]}
-    assert categories == EXPECTED_CATEGORIES
+    counts = {
+        category: sum(
+            record["category"] == category for record in manifest["records"]
+        )
+        for category in EXPECTED_CATEGORIES
+    }
+    assert counts == dict.fromkeys(EXPECTED_CATEGORIES, 5)
+
+
+def test_all_annotations_are_provisional() -> None:
+    manifest = json.loads(DEFAULT_MANIFEST_PATH.read_text(encoding="utf-8"))
+    for record in manifest["records"]:
+        annotation_path = DEFAULT_MANIFEST_PATH.parent / record["annotation_path"]
+        annotation = json.loads(annotation_path.read_text(encoding="utf-8"))
+        assert annotation["review"]["status"] == "seed_single_review"
+        assert annotation["review"]["reviewer_count"] == 1
 
 
 def test_invalid_step_time_is_reported(tmp_path: Path) -> None:

@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0",
+  "benchmark_id": "short-pasta-sauce",
+  "source_sha256": "4c1dd7f9563fcea85c3e5d7f05339ef39b3a8880003965a0edadc2391f468e09",
+  "review": {"status": "seed_single_review", "reviewer_count": 1, "reviewed_at": "2026-07-31", "method": "Visual review with local Whisper transcript support"},
+  "steps": [
+    {"step_id": "step-01", "order": 1, "title": "Heat the garlic", "instruction": "Heat two garlic cloves in olive oil until they start to simmer.", "start_ms": 0, "end_ms": 8000, "screenshot": {"time_ms": 5000, "region": {"x": 0.05, "y": 0.08, "width": 0.9, "height": 0.84}}},
+    {"step_id": "step-02", "order": 2, "title": "Add the tomatoes", "instruction": "Add one can of diced tomatoes to the pan.", "start_ms": 8000, "end_ms": 16800, "screenshot": {"time_ms": 12000, "region": {"x": 0.05, "y": 0.08, "width": 0.9, "height": 0.84}}},
+    {"step_id": "step-03", "order": 3, "title": "Season the sauce", "instruction": "Add basil, oregano, parsley, pepper, and optional red pepper flakes.", "start_ms": 16800, "end_ms": 30580, "screenshot": {"time_ms": 25000, "region": {"x": 0.05, "y": 0.08, "width": 0.9, "height": 0.84}}},
+    {"step_id": "step-04", "order": 4, "title": "Thicken the sauce", "instruction": "Mix in tomato paste and a small amount of water.", "start_ms": 30580, "end_ms": 49330, "screenshot": {"time_ms": 42000, "region": {"x": 0.05, "y": 0.08, "width": 0.9, "height": 0.84}}},
+    {"step_id": "step-05", "order": 5, "title": "Make the sauce creamy", "instruction": "Mix in cream cheese when you want a creamy sauce.", "start_ms": 49330, "end_ms": 59179, "screenshot": {"time_ms": 56000, "region": {"x": 0.05, "y": 0.08, "width": 0.9, "height": 0.84}}}
+  ]
+}

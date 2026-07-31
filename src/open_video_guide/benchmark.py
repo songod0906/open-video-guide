@@ -150,7 +150,22 @@ def validation_errors(
     for category in sorted(EXPECTED_CATEGORIES - present_categories):
         errors.append(f"manifest: category {category} has no seed record")
 
+    if manifest["status"] in {"review", "released"}:
+        target_count = manifest["target_items_per_category"]
+        for category in sorted(EXPECTED_CATEGORIES):
+            category_count = sum(
+                record["category"] == category for record in records
+            )
+            if category_count != target_count:
+                errors.append(
+                    f"manifest: category {category} has {category_count} records; "
+                    f"expected {target_count}"
+                )
+
     for record in records:
+        if record["speech"] and not record["media"]["audio"]["present"]:
+            errors.append(f"{record['id']}: speech requires an audio stream")
+
         annotation_path = manifest_path.parent / record["annotation_path"]
         if not annotation_path.is_file():
             errors.append(f"{record['id']}: annotation file is missing")

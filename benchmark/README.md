@@ -11,6 +11,9 @@ It does not contain source videos.
 | `v0.1-seed` | First provisional benchmark version |
 | `raw` | Ignored local source videos |
 
+Read the dataset card before benchmark use.
+Read the review status before model scoring.
+
 ## Validate records
 
 Run the record checks.

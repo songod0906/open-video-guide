@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0",
+  "benchmark_id": "narrated-wikilink",
+  "source_sha256": "97567ae8566f1d51a3b22ad504ab96ff686a3614ae547357996d88c2cf46244f",
+  "review": {"status": "seed_single_review", "reviewer_count": 1, "reviewed_at": "2026-07-31", "method": "Visual review with local Whisper transcript support"},
+  "steps": [
+    {"step_id": "step-01", "order": 1, "title": "Open the visual editor", "instruction": "Select Edit to open the Wikipedia visual editor.", "start_ms": 11440, "end_ms": 16940, "screenshot": {"time_ms": 15000, "region": {"x": 0.03, "y": 0.05, "width": 0.94, "height": 0.9}}},
+    {"step_id": "step-02", "order": 2, "title": "Create a visual link", "instruction": "Select the word, choose the link tool, and select the correct article.", "start_ms": 16940, "end_ms": 28940, "screenshot": {"time_ms": 24000, "region": {"x": 0.03, "y": 0.05, "width": 0.94, "height": 0.9}}},
+    {"step_id": "step-03", "order": 3, "title": "Publish the visual edit", "instruction": "Select Publish changes, enter an edit summary, and confirm the change.", "start_ms": 28940, "end_ms": 43390, "screenshot": {"time_ms": 39000, "region": {"x": 0.03, "y": 0.05, "width": 0.94, "height": 0.9}}},
+    {"step_id": "step-04", "order": 4, "title": "Open the source editor", "instruction": "Open the editor menu and select source editing.", "start_ms": 43390, "end_ms": 55000, "screenshot": {"time_ms": 50000, "region": {"x": 0.03, "y": 0.05, "width": 0.94, "height": 0.9}}},
+    {"step_id": "step-05", "order": 5, "title": "Create a source link", "instruction": "Put double square brackets around the word, then publish the edit.", "start_ms": 55000, "end_ms": 79150, "screenshot": {"time_ms": 70000, "region": {"x": 0.03, "y": 0.05, "width": 0.94, "height": 0.9}}}
+  ]
+}

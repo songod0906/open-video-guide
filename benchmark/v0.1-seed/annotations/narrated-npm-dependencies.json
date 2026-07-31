@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0",
+  "benchmark_id": "narrated-npm-dependencies",
+  "source_sha256": "3d01ce3b928959c4a6cb9faea7d320cb5dbae416161a86a444afd278bd71ec81",
+  "review": {"status": "seed_single_review", "reviewer_count": 1, "reviewed_at": "2026-07-31", "method": "Visual review with local Whisper transcript support"},
+  "steps": [
+    {"step_id": "step-01", "order": 1, "title": "Open the dependency list", "instruction": "Open the dependencies object in the package.json file.", "start_ms": 39620, "end_ms": 57820, "screenshot": {"time_ms": 50000, "region": {"x": 0.05, "y": 0.08, "width": 0.9, "height": 0.84}}},
+    {"step_id": "step-02", "order": 2, "title": "Add the package name", "instruction": "Add a new dependency key named moment.", "start_ms": 74460, "end_ms": 97740, "screenshot": {"time_ms": 92000, "region": {"x": 0.05, "y": 0.08, "width": 0.9, "height": 0.84}}},
+    {"step_id": "step-03", "order": 3, "title": "Set the package version", "instruction": "Set the moment dependency value to version 2.14.0.", "start_ms": 97740, "end_ms": 105420, "screenshot": {"time_ms": 102000, "region": {"x": 0.05, "y": 0.08, "width": 0.9, "height": 0.84}}},
+    {"step_id": "step-04", "order": 4, "title": "Submit the exercise", "instruction": "Copy the completed code and submit the exercise.", "start_ms": 105420, "end_ms": 115260, "screenshot": {"time_ms": 112000, "region": {"x": 0.05, "y": 0.08, "width": 0.9, "height": 0.84}}}
+  ]
+}

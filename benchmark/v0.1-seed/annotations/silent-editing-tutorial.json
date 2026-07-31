@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0",
+  "benchmark_id": "silent-editing-tutorial",
+  "source_sha256": "7beb17bb5a9d38c692788f3f0a659a9285e65234f25a27f47cfed121842c7f88",
+  "review": {"status": "seed_single_review", "reviewer_count": 1, "reviewed_at": "2026-07-31", "method": "Visual review of the silent benchmark source"},
+  "steps": [
+    {"step_id": "step-01", "order": 1, "title": "Open the editing tutorial", "instruction": "Open the Wikiversity editing tutorial from the main page.", "start_ms": 23000, "end_ms": 43000, "screenshot": {"time_ms": 35000, "region": {"x": 0.03, "y": 0.05, "width": 0.94, "height": 0.9}}},
+    {"step_id": "step-02", "order": 2, "title": "Open a page editor", "instruction": "Select the edit control on a Wikiversity page.", "start_ms": 43000, "end_ms": 61000, "screenshot": {"time_ms": 55000, "region": {"x": 0.03, "y": 0.05, "width": 0.94, "height": 0.9}}},
+    {"step_id": "step-03", "order": 3, "title": "Add page content", "instruction": "Enter new content in the page editor.", "start_ms": 61000, "end_ms": 75000, "screenshot": {"time_ms": 70000, "region": {"x": 0.03, "y": 0.05, "width": 0.94, "height": 0.9}}},
+    {"step_id": "step-04", "order": 4, "title": "Preview and save", "instruction": "Enter an edit summary, preview the change, and save the page.", "start_ms": 75000, "end_ms": 90000, "screenshot": {"time_ms": 85000, "region": {"x": 0.03, "y": 0.05, "width": 0.94, "height": 0.9}}}
+  ]
+}

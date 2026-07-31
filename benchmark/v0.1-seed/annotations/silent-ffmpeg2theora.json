@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0",
+  "benchmark_id": "silent-ffmpeg2theora",
+  "source_sha256": "17d77925fd04b908c33ed0db7f0e3a20fca7dd954854a5d395df36bf62c12ed6",
+  "review": {"status": "seed_single_review", "reviewer_count": 1, "reviewed_at": "2026-07-31", "method": "Visual review of the silent benchmark source"},
+  "steps": [
+    {"step_id": "step-01", "order": 1, "title": "Convert the source video", "instruction": "Run ffmpeg2theora on the source video and verify the Ogg output file.", "start_ms": 0, "end_ms": 55000, "screenshot": {"time_ms": 45000, "region": {"x": 0.03, "y": 0.05, "width": 0.94, "height": 0.9}}},
+    {"step_id": "step-02", "order": 2, "title": "Upload the Ogg file", "instruction": "Open the Commons upload wizard and select the converted Ogg file.", "start_ms": 55000, "end_ms": 95000, "screenshot": {"time_ms": 85000, "region": {"x": 0.03, "y": 0.05, "width": 0.94, "height": 0.9}}},
+    {"step_id": "step-03", "order": 3, "title": "Describe the upload", "instruction": "Add the title, description, date, categories, and license.", "start_ms": 95000, "end_ms": 135000, "screenshot": {"time_ms": 120000, "region": {"x": 0.03, "y": 0.05, "width": 0.94, "height": 0.9}}},
+    {"step_id": "step-04", "order": 4, "title": "Insert the video", "instruction": "Open the wiki source editor and add the uploaded video file.", "start_ms": 135000, "end_ms": 180000, "screenshot": {"time_ms": 165000, "region": {"x": 0.03, "y": 0.05, "width": 0.94, "height": 0.9}}},
+    {"step_id": "step-05", "order": 5, "title": "Verify the page", "instruction": "Preview the page and verify that the video appears.", "start_ms": 180000, "end_ms": 226000, "screenshot": {"time_ms": 210000, "region": {"x": 0.03, "y": 0.05, "width": 0.94, "height": 0.9}}}
+  ]
+}

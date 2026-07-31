@@ -15,6 +15,6 @@ The project uses semantic versioning after the first release.
 - Security, privacy, data, and license policies
 - Versioned guide JSON schema
 - Guide validation command
-- Seed benchmark records and provisional annotations
+- Twenty authorized benchmark records and provisional annotations
 - Benchmark schemas and validation command
 - Repository quality and contribution controls

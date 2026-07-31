@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0",
+  "benchmark_id": "physical-boom-buddy",
+  "source_sha256": "32efe5c84359d4ffd40d30ef229a51c53cb258910e8df4f24ea7d29fea3e4cd8",
+  "review": {"status": "seed_single_review", "reviewer_count": 1, "reviewed_at": "2026-07-31", "method": "Visual review with local Whisper transcript support"},
+  "steps": [
+    {"step_id": "step-01", "order": 1, "title": "Prepare the materials", "instruction": "Prepare the template, scissors, coloring tools, and a glue stick.", "start_ms": 17250, "end_ms": 27930, "screenshot": {"time_ms": 24000, "region": {"x": 0.05, "y": 0.08, "width": 0.9, "height": 0.84}}},
+    {"step_id": "step-02", "order": 2, "title": "Decorate the template", "instruction": "Draw the face and other details on the flat template.", "start_ms": 27930, "end_ms": 79380, "screenshot": {"time_ms": 60000, "region": {"x": 0.05, "y": 0.08, "width": 0.9, "height": 0.84}}},
+    {"step_id": "step-03", "order": 3, "title": "Cut the solid lines", "instruction": "Cut around the template and arms along the solid lines.", "start_ms": 79380, "end_ms": 93980, "screenshot": {"time_ms": 88000, "region": {"x": 0.05, "y": 0.08, "width": 0.9, "height": 0.84}}},
+    {"step_id": "step-04", "order": 4, "title": "Fold the dotted lines", "instruction": "Fold the template along each dotted line.", "start_ms": 93980, "end_ms": 105080, "screenshot": {"time_ms": 100000, "region": {"x": 0.05, "y": 0.08, "width": 0.9, "height": 0.84}}},
+    {"step_id": "step-05", "order": 5, "title": "Glue the body", "instruction": "Put glue on the tabs and press the body into shape.", "start_ms": 105080, "end_ms": 111500, "screenshot": {"time_ms": 108000, "region": {"x": 0.05, "y": 0.08, "width": 0.9, "height": 0.84}}},
+    {"step_id": "step-06", "order": 6, "title": "Add arms and accessories", "instruction": "Attach the arms and add accessories made from scrap paper.", "start_ms": 111500, "end_ms": 144310, "screenshot": {"time_ms": 130000, "region": {"x": 0.05, "y": 0.08, "width": 0.9, "height": 0.84}}}
+  ]
+}
