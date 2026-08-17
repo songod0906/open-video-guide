@@ -43,3 +43,26 @@ python -m ruff check .
 Add an architecture decision record for a change to a major technical decision.
 Add test evidence for each product capability.
 Update the risk register when a change adds a material risk.
+
+## Shared project handoff
+
+Run this command at the start of each work session:
+
+```bash
+python scripts/project_context.py
+```
+
+Read `.project-context/PROJECT_CONTEXT.md` before you plan work.
+Use `docs/PROJECT_STATE.json` as the semantic project record.
+
+Update `docs/PROJECT_STATE.json` when capability, priority, status, or limits change.
+Do not store conversation transcripts in the project state.
+
+Run this command before a handoff:
+
+```bash
+make handoff
+```
+
+Give the next agent the repository path.
+The next agent must refresh the project context before work.

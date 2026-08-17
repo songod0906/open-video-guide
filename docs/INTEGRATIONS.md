@@ -25,6 +25,13 @@ The first MCP server will expose these tools:
 Write tools must use idempotency keys.
 The server must require confirmation for a consequential file change.
 
+The local alpha implements `inspect_video` and synchronous `create_guide`.
+The local transport smoke test passed on 2026-07-31.
+
+The installed Odysseus application passed its integration test on 2026-07-31.
+Odysseus called both tools through the standard-input server.
+It created `frame-only` and `local-ai` guide artifacts.
+
 ## 3. ChatGPT and Codex
 
 OpenAI now describes this integration surface as a plugin.
@@ -85,6 +92,9 @@ It also includes server-sent event support.
 
 Open Video Guide will provide a standard-input adapter first.
 It will also keep a compatibility transport for older MCP clients.
+
+The installed Odysseus application passed the local integration test.
+This result does not verify all Odysseus versions.
 
 Odysseus is a strong early integration target for these reasons:
 

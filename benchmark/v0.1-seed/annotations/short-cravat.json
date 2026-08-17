@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0",
+  "benchmark_id": "short-cravat",
+  "source_sha256": "db1c41eca7e436f46cf2654ca1c685f0da95764c67badfd09c2f12fa6d52cfa7",
+  "review": {"status": "seed_single_review", "reviewer_count": 1, "reviewed_at": "2026-07-31", "method": "Visual review with local Whisper transcript support"},
+  "steps": [
+    {"step_id": "step-01", "order": 1, "title": "Prepare the collar", "instruction": "Fasten the top shirt button and put the cravat around the collar.", "start_ms": 8030, "end_ms": 15830, "screenshot": {"time_ms": 12000, "region": {"x": 0.12, "y": 0.05, "width": 0.76, "height": 0.9}}},
+    {"step_id": "step-02", "order": 2, "title": "Set the blade lengths", "instruction": "Set one blade end level with the top shirt button.", "start_ms": 15830, "end_ms": 20450, "screenshot": {"time_ms": 18000, "region": {"x": 0.12, "y": 0.05, "width": 0.76, "height": 0.9}}},
+    {"step_id": "step-03", "order": 3, "title": "Cross the blades", "instruction": "Cross one blade over the other blade.", "start_ms": 20450, "end_ms": 30130, "screenshot": {"time_ms": 26000, "region": {"x": 0.12, "y": 0.05, "width": 0.76, "height": 0.9}}},
+    {"step_id": "step-04", "order": 4, "title": "Wrap the long blade", "instruction": "Move the long blade around the back, across the front, and upward.", "start_ms": 30130, "end_ms": 38610, "screenshot": {"time_ms": 35000, "region": {"x": 0.12, "y": 0.05, "width": 0.76, "height": 0.9}}},
+    {"step_id": "step-05", "order": 5, "title": "Form the knot", "instruction": "Pass the long blade through and keep the knot loose and full.", "start_ms": 38610, "end_ms": 50390, "screenshot": {"time_ms": 45000, "region": {"x": 0.12, "y": 0.05, "width": 0.76, "height": 0.9}}},
+    {"step_id": "step-06", "order": 6, "title": "Tighten the cravat", "instruction": "Push the short blade through the front and adjust the knot upward.", "start_ms": 50390, "end_ms": 63870, "screenshot": {"time_ms": 58000, "region": {"x": 0.12, "y": 0.05, "width": 0.76, "height": 0.9}}},
+    {"step_id": "step-07", "order": 7, "title": "Shape the finish", "instruction": "Shape a large knot that covers the top button.", "start_ms": 63870, "end_ms": 78623, "screenshot": {"time_ms": 72000, "region": {"x": 0.12, "y": 0.05, "width": 0.76, "height": 0.9}}}
+  ]
+}

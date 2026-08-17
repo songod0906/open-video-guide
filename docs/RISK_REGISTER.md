@@ -14,6 +14,17 @@
 | R-10 | Technical text does not obey STE | Medium | Medium | Use checks and trained review | Technical writer |
 | R-11 | Confidence is not calibrated | Medium | High | Measure calibration on held-out data | AI engineer |
 | R-12 | An MCP tool exposes a private job | Low | Critical | Enforce ownership in the service | Security reviewer |
+| R-13 | One reviewer introduces annotation bias | High | Medium | Require two reviewers before benchmark scoring | AI engineer |
+| R-14 | A generated physical guide causes injury | Medium | Critical | Add warnings and exclude safety certification | Product owner |
+| R-15 | An MCP client requests an unauthorized local path | Medium | Critical | Require approved input and output roots | Security reviewer |
+| R-16 | A model download uses excessive storage or network data | Medium | Medium | Show model size and keep a small default | AI engineer |
+| R-17 | A job overwrites files from another application | Low | High | Require a product marker in a reused output directory | Software engineer |
+| R-18 | A test driver performs an unintended administration call | Low | High | Bind locally and use fixed test actions | Software engineer |
+| R-19 | Local jobs use excessive storage | Medium | High | Limit uploads and show stored job sizes | Software engineer |
+| R-20 | Another website sends a local editor command | Medium | High | Check the host and write-request origin | Security reviewer |
+| R-21 | An agent uses stale project context | Medium | High | Refresh from Git and keep one project state | Technical lead |
+| R-22 | A model repeats prompt text as an instruction | High | High | Keep fallback text out of the prompt and test for prompt echo | AI engineer |
+| R-23 | An agent test replaces a necessary human test | Medium | Medium | Record the test type and keep the human gate open | Product owner |
 
 Review this register at each stage gate.
 Add a risk when a change adds a new trust boundary.

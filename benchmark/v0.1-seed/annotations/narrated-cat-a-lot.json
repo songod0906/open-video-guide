@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0",
+  "benchmark_id": "narrated-cat-a-lot",
+  "source_sha256": "bfa59db765b696793807b569b100c8ced0af85e0322b0049b5e0ba8cf3e59aab",
+  "review": {"status": "seed_single_review", "reviewer_count": 1, "reviewed_at": "2026-07-31", "method": "Visual review with local Whisper transcript support"},
+  "steps": [
+    {"step_id": "step-01", "order": 1, "title": "Enable Cat-a-lot", "instruction": "Open user preferences, select Gadgets, enable Cat-a-lot, and save the change.", "start_ms": 70530, "end_ms": 98530, "screenshot": {"time_ms": 90000, "region": {"x": 0.03, "y": 0.05, "width": 0.94, "height": 0.9}}},
+    {"step_id": "step-02", "order": 2, "title": "Open the category tool", "instruction": "Open a Commons category and select the Cat-a-lot link.", "start_ms": 106530, "end_ms": 147940, "screenshot": {"time_ms": 140000, "region": {"x": 0.03, "y": 0.05, "width": 0.94, "height": 0.9}}},
+    {"step_id": "step-03", "order": 3, "title": "Select the files", "instruction": "Select individual files or use Shift to select a file range.", "start_ms": 171940, "end_ms": 222940, "screenshot": {"time_ms": 200000, "region": {"x": 0.03, "y": 0.05, "width": 0.94, "height": 0.9}}},
+    {"step_id": "step-04", "order": 4, "title": "Move the files", "instruction": "Select the destination category and use Move to change the file categories.", "start_ms": 226940, "end_ms": 267940, "screenshot": {"time_ms": 250000, "region": {"x": 0.03, "y": 0.05, "width": 0.94, "height": 0.9}}},
+    {"step_id": "step-05", "order": 5, "title": "Verify the move", "instruction": "Refresh both categories and verify that the files moved.", "start_ms": 267940, "end_ms": 298860, "screenshot": {"time_ms": 290000, "region": {"x": 0.03, "y": 0.05, "width": 0.94, "height": 0.9}}},
+    {"step_id": "step-06", "order": 6, "title": "Search for another category", "instruction": "Enter a category name and select a matching destination from the results.", "start_ms": 298860, "end_ms": 349990, "screenshot": {"time_ms": 335000, "region": {"x": 0.03, "y": 0.05, "width": 0.94, "height": 0.9}}}
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0",
+  "benchmark_id": "silent-interlanguage-linking",
+  "source_sha256": "6f94d2b93f420e003d2cc29afc51c6e88d1ac3e639e68c0ab9251cebe96302b4",
+  "review": {"status": "seed_single_review", "reviewer_count": 1, "reviewed_at": "2026-07-31", "method": "Visual review of the silent benchmark source"},
+  "steps": [
+    {"step_id": "step-01", "order": 1, "title": "Open the source article", "instruction": "Open the source-language article and find its language-link controls.", "start_ms": 0, "end_ms": 36000, "screenshot": {"time_ms": 30000, "region": {"x": 0.03, "y": 0.05, "width": 0.94, "height": 0.9}}},
+    {"step_id": "step-02", "order": 2, "title": "Open the link dialog", "instruction": "Open the control that adds an interlanguage link.", "start_ms": 36000, "end_ms": 65000, "screenshot": {"time_ms": 55000, "region": {"x": 0.03, "y": 0.05, "width": 0.94, "height": 0.9}}},
+    {"step_id": "step-03", "order": 3, "title": "Select the target article", "instruction": "Select the target language and find the equivalent article.", "start_ms": 65000, "end_ms": 90000, "screenshot": {"time_ms": 80000, "region": {"x": 0.03, "y": 0.05, "width": 0.94, "height": 0.9}}},
+    {"step_id": "step-04", "order": 4, "title": "Save the language link", "instruction": "Confirm the link and verify it on the article.", "start_ms": 90000, "end_ms": 117600, "screenshot": {"time_ms": 110000, "region": {"x": 0.03, "y": 0.05, "width": 0.94, "height": 0.9}}}
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "schema_version": "1.0",
+  "benchmark_id": "narrated-software-cite-video",
+  "source_sha256": "0fc950ad8aedcae6feffd25996e6a50237416760bd5d96722ee92dd68941298c",
+  "review": {
+    "status": "seed_single_review",
+    "reviewer_count": 1,
+    "reviewed_at": "2026-07-31",
+    "method": "Visual review with local Whisper transcript support"
+  },
+  "steps": [
+    {
+      "step_id": "step-01",
+      "order": 1,
+      "title": "Find a source video",
+      "instruction": "Open the Wikimedia Commons category and select a suitable bird video.",
+      "start_ms": 0,
+      "end_ms": 43600,
+      "screenshot": {
+        "time_ms": 30000,
+        "region": {
+          "x": 0.02,
+          "y": 0.08,
+          "width": 0.96,
+          "height": 0.84
+        }
+      }
+    },
+    {
+      "step_id": "step-02",
+      "order": 2,
+      "title": "Find the species article",
+      "instruction": "Copy the Latin species name and search for it on English Wikipedia.",
+      "start_ms": 43600,
+      "end_ms": 82600,
+      "screenshot": {
+        "time_ms": 68000,
+        "region": {
+          "x": 0.04,
+          "y": 0.08,
+          "width": 0.92,
+          "height": 0.84
+        }
+      }
+    },
+    {
+      "step_id": "step-03",
+      "order": 3,
+      "title": "Open the source editor",
+      "instruction": "Open the article source editor below the first paragraph.",
+      "start_ms": 82600,
+      "end_ms": 94900,
+      "screenshot": {
+        "time_ms": 90000,
+        "region": {
+          "x": 0.05,
+          "y": 0.12,
+          "width": 0.9,
+          "height": 0.76
+        }
+      }
+    },
+    {
+      "step_id": "step-04",
+      "order": 4,
+      "title": "Add the video markup",
+      "instruction": "Add the exact file name, thumbnail type, width, and right alignment.",
+      "start_ms": 94900,
+      "end_ms": 138700,
+      "screenshot": {
+        "time_ms": 120000,
+        "region": {
+          "x": 0.05,
+          "y": 0.18,
+          "width": 0.9,
+          "height": 0.62
+        }
+      }
+    },
+    {
+      "step_id": "step-05",
+      "order": 5,
+      "title": "Set the fragment",
+      "instruction": "Add the start time, end time, and caption to the video markup.",
+      "start_ms": 138700,
+      "end_ms": 187700,
+      "screenshot": {
+        "time_ms": 170000,
+        "region": {
+          "x": 0.05,
+          "y": 0.18,
+          "width": 0.9,
+          "height": 0.62
+        }
+      }
+    },
+    {
+      "step_id": "step-06",
+      "order": 6,
+      "title": "Preview and save",
+      "instruction": "Preview the article, test the video fragment, and save the page.",
+      "start_ms": 187700,
+      "end_ms": 223100,
+      "screenshot": {
+        "time_ms": 198000,
+        "region": {
+          "x": 0.04,
+          "y": 0.08,
+          "width": 0.92,
+          "height": 0.84
+        }
+      }
+    }
+  ]
+}

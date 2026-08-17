@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0",
+  "benchmark_id": "short-universal-subtitles-step1",
+  "source_sha256": "b0d6876e6ffbff3c39d75900ee3f5c41ff9a2130e0f72640424e3fdccb703c4f",
+  "review": {"status": "seed_single_review", "reviewer_count": 1, "reviewed_at": "2026-07-31", "method": "Visual review with local Whisper transcript support"},
+  "steps": [
+    {"step_id": "step-01", "order": 1, "title": "Play and type", "instruction": "Play the video and type each spoken line in the subtitle field.", "start_ms": 8050, "end_ms": 20050, "screenshot": {"time_ms": 15000, "region": {"x": 0.03, "y": 0.05, "width": 0.94, "height": 0.9}}},
+    {"step_id": "step-02", "order": 2, "title": "Start each new line", "instruction": "Press Enter when the speaker starts a new subtitle line.", "start_ms": 20050, "end_ms": 27050, "screenshot": {"time_ms": 24000, "region": {"x": 0.03, "y": 0.05, "width": 0.94, "height": 0.9}}},
+    {"step_id": "step-03", "order": 3, "title": "Use automatic pause", "instruction": "Select automatic pause and use Tab to control playback when necessary.", "start_ms": 27050, "end_ms": 54050, "screenshot": {"time_ms": 45000, "region": {"x": 0.03, "y": 0.05, "width": 0.94, "height": 0.9}}},
+    {"step_id": "step-04", "order": 4, "title": "Complete the typing step", "instruction": "Type the remaining lines and select Done when the video ends.", "start_ms": 54050, "end_ms": 65767, "screenshot": {"time_ms": 62000, "region": {"x": 0.03, "y": 0.05, "width": 0.94, "height": 0.9}}}
+  ]
+}

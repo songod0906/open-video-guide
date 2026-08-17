@@ -13,6 +13,8 @@ __pycache__/
 *.egg-info/
 .pytest_cache/
 .ruff_cache/
+.playwright-cli/
+.project-context/
 .mypy_cache/
 .coverage
 htmlcov/
@@ -37,6 +39,7 @@ weights/
 *.onnx
 
 # User media and generated data
+.ovg-data/
 data/
 uploads/
 inputs/
@@ -44,10 +47,12 @@ outputs/
 artifacts/
 screenshots/
 logs/
+benchmark/raw/
 *.mp4
 *.mov
 *.mkv
 *.webm
+*.ogv
 *.avi
 *.wav
 *.mp3

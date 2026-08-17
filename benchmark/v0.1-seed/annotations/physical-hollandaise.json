@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0",
+  "benchmark_id": "physical-hollandaise",
+  "source_sha256": "f9eba0a337297c820f0eaaba44d7ab9daa5d94dff49cecf8bc92a7d8bdfbe7f4",
+  "review": {"status": "seed_single_review", "reviewer_count": 1, "reviewed_at": "2026-07-31", "method": "Visual review with local Whisper transcript support"},
+  "steps": [
+    {"step_id": "step-01", "order": 1, "title": "Prepare the tools", "instruction": "Prepare a small pot, measuring cup, hand blender, and narrow blender cup.", "start_ms": 85780, "end_ms": 91580, "screenshot": {"time_ms": 90000, "region": {"x": 0.05, "y": 0.08, "width": 0.9, "height": 0.84}}},
+    {"step_id": "step-02", "order": 2, "title": "Combine the base", "instruction": "Add egg yolk, water, lemon juice, and salt to the blender cup.", "start_ms": 91580, "end_ms": 98580, "screenshot": {"time_ms": 95000, "region": {"x": 0.05, "y": 0.08, "width": 0.9, "height": 0.84}}},
+    {"step_id": "step-03", "order": 3, "title": "Heat the butter", "instruction": "Melt the butter until it bubbles and reaches 220 degrees Fahrenheit.", "start_ms": 98580, "end_ms": 109080, "screenshot": {"time_ms": 104000, "region": {"x": 0.05, "y": 0.08, "width": 0.9, "height": 0.84}}},
+    {"step_id": "step-04", "order": 4, "title": "Blend the sauce", "instruction": "Run the hand blender and slowly add the hot butter.", "start_ms": 109080, "end_ms": 125880, "screenshot": {"time_ms": 118000, "region": {"x": 0.05, "y": 0.08, "width": 0.9, "height": 0.84}}},
+    {"step_id": "step-05", "order": 5, "title": "Serve or hold the sauce", "instruction": "Serve the sauce immediately or keep it covered in a warm place.", "start_ms": 129780, "end_ms": 140680, "screenshot": {"time_ms": 135000, "region": {"x": 0.05, "y": 0.08, "width": 0.9, "height": 0.84}}}
+  ]
+}

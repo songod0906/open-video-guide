@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0",
+  "benchmark_id": "silent-wikipedia-links",
+  "source_sha256": "8d7d42b475cf8a07b24f17226559ec7d2f90381f9a85c5f1781bb7b1f7f7f2d3",
+  "review": {"status": "seed_single_review", "reviewer_count": 1, "reviewed_at": "2026-07-31", "method": "Visual review of the silent benchmark source"},
+  "steps": [
+    {"step_id": "step-01", "order": 1, "title": "Open the source editor", "instruction": "Open the source editor for the Wikipedia article.", "start_ms": 0, "end_ms": 8000, "screenshot": {"time_ms": 6000, "region": {"x": 0.03, "y": 0.05, "width": 0.94, "height": 0.9}}},
+    {"step_id": "step-02", "order": 2, "title": "Add link markup", "instruction": "Put double square brackets around the article term.", "start_ms": 8000, "end_ms": 35000, "screenshot": {"time_ms": 25000, "region": {"x": 0.03, "y": 0.05, "width": 0.94, "height": 0.9}}},
+    {"step_id": "step-03", "order": 3, "title": "Preview the link", "instruction": "Select preview and verify that the new link opens the correct article.", "start_ms": 35000, "end_ms": 50000, "screenshot": {"time_ms": 45000, "region": {"x": 0.03, "y": 0.05, "width": 0.94, "height": 0.9}}},
+    {"step_id": "step-04", "order": 4, "title": "Save the edit", "instruction": "Enter an edit summary and save the page.", "start_ms": 50000, "end_ms": 60601, "screenshot": {"time_ms": 56000, "region": {"x": 0.03, "y": 0.05, "width": 0.94, "height": 0.9}}}
+  ]
+}

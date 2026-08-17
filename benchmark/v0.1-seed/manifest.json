@@ -1,0 +1,721 @@
+{
+  "schema_version": "1.0",
+  "benchmark_version": "0.1-seed",
+  "name": "Open Video Guide Seed Benchmark",
+  "created_at": "2026-07-31",
+  "status": "review",
+  "target_items_per_category": 5,
+  "records": [
+    {
+      "id": "narrated-software-cite-video",
+      "title": "Cite a Video in a Wikipedia Article",
+      "category": "narrated_software",
+      "language": "en",
+      "speech": true,
+      "source": {
+        "page_url": "https://commons.wikimedia.org/wiki/File:Tutorial_on_how_to_cite_video_in_Wikipedia_articles.webm",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/c/cb/Tutorial_on_how_to_cite_video_in_Wikipedia_articles.webm/Tutorial_on_how_to_cite_video_in_Wikipedia_articles.webm.480p.vp9.webm",
+        "author": "85jesse",
+        "source_statement": "Own work",
+        "license": {
+          "identifier": "CC0-1.0",
+          "name": "CC0 1.0 Universal",
+          "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "attribution_required": false,
+          "share_alike": false
+        },
+        "original_sha1": "468d3f6e835836bb6b60c3c0ac71cdc444846ed0",
+        "retrieved_at": "2026-07-31"
+      },
+      "media": {
+        "file_name": "narrated-software-cite-video.webm",
+        "sha256": "0fc950ad8aedcae6feffd25996e6a50237416760bd5d96722ee92dd68941298c",
+        "size_bytes": 15920265,
+        "duration_ms": 235491,
+        "width_px": 834,
+        "height_px": 480,
+        "video_codec": "vp9",
+        "audio": {
+          "present": true,
+          "codec": "opus"
+        },
+        "transformations": [
+          "Used the Wikimedia Commons 480p VP9 transcode."
+        ]
+      },
+      "annotation_path": "annotations/narrated-software-cite-video.json"
+    },
+    {
+      "id": "silent-software-wikimedia-screencast",
+      "title": "Edit a Phabricator Task",
+      "category": "silent_software",
+      "language": "en",
+      "speech": false,
+      "source": {
+        "page_url": "https://commons.wikimedia.org/wiki/File:Wikimedia_Screencast.webm",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/8/8f/Wikimedia_Screencast.webm/Wikimedia_Screencast.webm.480p.vp9.webm",
+        "author": "Toolboxx8",
+        "source_statement": "Own work",
+        "license": {
+          "identifier": "CC-BY-SA-4.0",
+          "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+          "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "attribution_required": true,
+          "share_alike": true
+        },
+        "original_sha1": "249a100e6ab27e55e0096162eafcbf97ee27a033",
+        "retrieved_at": "2026-07-31"
+      },
+      "media": {
+        "file_name": "silent-software-wikimedia-screencast.webm",
+        "sha256": "2aa42efc883969c3ca77667c104af5f7722f390c8732a337e61a3d14dd659744",
+        "size_bytes": 538279,
+        "duration_ms": 87125,
+        "width_px": 640,
+        "height_px": 480,
+        "video_codec": "vp9",
+        "audio": {
+          "present": false,
+          "codec": null
+        },
+        "transformations": [
+          "Used the Wikimedia Commons 480p VP9 transcode.",
+          "Removed the audio stream with FFmpeg 8.1.1."
+        ]
+      },
+      "annotation_path": "annotations/silent-software-wikimedia-screencast.json"
+    },
+    {
+      "id": "physical-rope-bowline",
+      "title": "Tie the Middle of a Rope to an Eye",
+      "category": "physical",
+      "language": "en",
+      "speech": true,
+      "source": {
+        "page_url": "https://commons.wikimedia.org/wiki/File:Tying_off_onto_the_middle_of_a_rope.webm",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/c/c3/Tying_off_onto_the_middle_of_a_rope.webm/Tying_off_onto_the_middle_of_a_rope.webm.480p.vp9.webm",
+        "author": "Slashme",
+        "source_statement": "Own work",
+        "license": {
+          "identifier": "CC-BY-SA-4.0",
+          "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+          "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "attribution_required": true,
+          "share_alike": true
+        },
+        "original_sha1": "e54718eca082307590c7e570e560bc9803219df3",
+        "retrieved_at": "2026-07-31"
+      },
+      "media": {
+        "file_name": "physical-rope-bowline.webm",
+        "sha256": "c6ba490bfdb624abedf28f5c78d6df3755e62314218bc4f4f30ba79ab2b7f3aa",
+        "size_bytes": 34378332,
+        "duration_ms": 441263,
+        "width_px": 854,
+        "height_px": 480,
+        "video_codec": "vp9",
+        "audio": {
+          "present": true,
+          "codec": "opus"
+        },
+        "transformations": [
+          "Used the Wikimedia Commons 480p VP9 transcode."
+        ]
+      },
+      "annotation_path": "annotations/physical-rope-bowline.json"
+    },
+    {
+      "id": "short-form-mobile-screencast",
+      "title": "Demonstrate Mobile Wikipedia Screen Capture",
+      "category": "short_form",
+      "language": "en",
+      "speech": true,
+      "source": {
+        "page_url": "https://commons.wikimedia.org/wiki/File:Awesome_Mobile_Screen_Cast.ogv",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Awesome_Mobile_Screen_Cast.ogv",
+        "author": "LauraHale",
+        "source_statement": "Own work",
+        "license": {
+          "identifier": "CC-BY-3.0",
+          "name": "Creative Commons Attribution 3.0 Unported",
+          "url": "https://creativecommons.org/licenses/by/3.0/",
+          "attribution_required": true,
+          "share_alike": false
+        },
+        "original_sha1": "17871d742d8bf276d18357d26089093f2b6df5b2",
+        "retrieved_at": "2026-07-31"
+      },
+      "media": {
+        "file_name": "short-form-mobile-screencast.ogv",
+        "sha256": "7631c751acd8410cd27b125ddba73a5b7326049b38af61ddb8e658d00665a6bc",
+        "size_bytes": 4082618,
+        "duration_ms": 58767,
+        "width_px": 480,
+        "height_px": 360,
+        "video_codec": "theora",
+        "audio": {
+          "present": true,
+          "codec": "vorbis"
+        },
+        "transformations": []
+      },
+      "annotation_path": "annotations/short-form-mobile-screencast.json"
+    },
+    {
+      "id": "narrated-inkscape-biohazard",
+      "title": "Make a Biohazard Symbol in Inkscape",
+      "category": "narrated_software",
+      "language": "en",
+      "speech": true,
+      "source": {
+        "page_url": "https://commons.wikimedia.org/wiki/File:Inkscape-_making_a_biohazard_symbol.webm",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/f/ff/Inkscape-_making_a_biohazard_symbol.webm/Inkscape-_making_a_biohazard_symbol.webm.480p.vp9.webm",
+        "author": "Adam Coster",
+        "source_statement": "YouTube source",
+        "license": {
+          "identifier": "CC-BY-3.0",
+          "name": "Creative Commons Attribution 3.0 Unported",
+          "url": "https://creativecommons.org/licenses/by/3.0/",
+          "attribution_required": true,
+          "share_alike": false
+        },
+        "original_sha1": "5b0ce2a6f28116c2b13ce7985259d674bd8c18b5",
+        "retrieved_at": "2026-07-31"
+      },
+      "media": {
+        "file_name": "narrated-inkscape-biohazard.webm",
+        "sha256": "70208ee96a8af8074cc2967b4124d39a21d7bd3252c54c60ef5375c4aa6846b5",
+        "size_bytes": 12916994,
+        "duration_ms": 531147,
+        "width_px": 854,
+        "height_px": 480,
+        "video_codec": "vp9",
+        "audio": {"present": true, "codec": "opus"},
+        "transformations": ["Used the Wikimedia Commons 480p VP9 transcode."]
+      },
+      "annotation_path": "annotations/narrated-inkscape-biohazard.json"
+    },
+    {
+      "id": "narrated-npm-dependencies",
+      "title": "Add an npm Dependency",
+      "category": "narrated_software",
+      "language": "en",
+      "speech": true,
+      "source": {
+        "page_url": "https://commons.wikimedia.org/wiki/File:Npm_explainer_tutorial_video_-_Expand_Your_Project_with_External_Packages_-_Managing_Packages_with_npm_-_freeCodeCamp_Tutorial.webm",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/f/fb/Npm_explainer_tutorial_video_-_Expand_Your_Project_with_External_Packages_-_Managing_Packages_with_npm_-_freeCodeCamp_Tutorial.webm/Npm_explainer_tutorial_video_-_Expand_Your_Project_with_External_Packages_-_Managing_Packages_with_npm_-_freeCodeCamp_Tutorial.webm.480p.vp9.webm",
+        "author": "Ganesh H",
+        "source_statement": "YouTube source",
+        "license": {
+          "identifier": "CC-BY-3.0",
+          "name": "Creative Commons Attribution 3.0 Unported",
+          "url": "https://creativecommons.org/licenses/by/3.0/",
+          "attribution_required": true,
+          "share_alike": false
+        },
+        "original_sha1": "afc991659a8607a6cde03ba4daff4a4efa51f2fe",
+        "retrieved_at": "2026-07-31"
+      },
+      "media": {
+        "file_name": "narrated-npm-dependencies.webm",
+        "sha256": "3d01ce3b928959c4a6cb9faea7d320cb5dbae416161a86a444afd278bd71ec81",
+        "size_bytes": 3581529,
+        "duration_ms": 116490,
+        "width_px": 854,
+        "height_px": 476,
+        "video_codec": "vp9",
+        "audio": {"present": true, "codec": "opus"},
+        "transformations": ["Used the Wikimedia Commons 480p VP9 transcode."]
+      },
+      "annotation_path": "annotations/narrated-npm-dependencies.json"
+    },
+    {
+      "id": "narrated-cat-a-lot",
+      "title": "Move Files with Cat-a-lot",
+      "category": "narrated_software",
+      "language": "en",
+      "speech": true,
+      "source": {
+        "page_url": "https://commons.wikimedia.org/wiki/File:How_to_use_Cat-a-lot.webm",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/e/e1/How_to_use_Cat-a-lot.webm/How_to_use_Cat-a-lot.webm.480p.vp9.webm",
+        "author": "Pete Forsyth",
+        "source_statement": "Own work",
+        "license": {
+          "identifier": "CC-BY-4.0",
+          "name": "Creative Commons Attribution 4.0 International",
+          "url": "https://creativecommons.org/licenses/by/4.0/",
+          "attribution_required": true,
+          "share_alike": false
+        },
+        "original_sha1": "368d28c53dfb79ee6d3133b4b0dbe9efd4c2ddb7",
+        "retrieved_at": "2026-07-31"
+      },
+      "media": {
+        "file_name": "narrated-cat-a-lot.webm",
+        "sha256": "bfa59db765b696793807b569b100c8ced0af85e0322b0049b5e0ba8cf3e59aab",
+        "size_bytes": 11905443,
+        "duration_ms": 388055,
+        "width_px": 854,
+        "height_px": 480,
+        "video_codec": "vp9",
+        "audio": {"present": true, "codec": "opus"},
+        "transformations": ["Used the Wikimedia Commons 480p VP9 transcode."]
+      },
+      "annotation_path": "annotations/narrated-cat-a-lot.json"
+    },
+    {
+      "id": "narrated-wikilink",
+      "title": "Create Wikipedia Links",
+      "category": "narrated_software",
+      "language": "en",
+      "speech": true,
+      "source": {
+        "page_url": "https://commons.wikimedia.org/wiki/File:How_to_make_a_wikilink.webm",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/0/0a/How_to_make_a_wikilink.webm/How_to_make_a_wikilink.webm.480p.vp9.webm",
+        "author": "Psypherium",
+        "source_statement": "Screencast",
+        "license": {
+          "identifier": "CC-BY-3.0",
+          "name": "Creative Commons Attribution 3.0 Unported",
+          "url": "https://creativecommons.org/licenses/by/3.0/",
+          "attribution_required": true,
+          "share_alike": false
+        },
+        "original_sha1": "b98584231deae7ef55c9899a3ff51e3e1a0ec2a5",
+        "retrieved_at": "2026-07-31"
+      },
+      "media": {
+        "file_name": "narrated-wikilink.webm",
+        "sha256": "97567ae8566f1d51a3b22ad504ab96ff686a3614ae547357996d88c2cf46244f",
+        "size_bytes": 2067551,
+        "duration_ms": 84091,
+        "width_px": 854,
+        "height_px": 480,
+        "video_codec": "vp9",
+        "audio": {"present": true, "codec": "opus"},
+        "transformations": ["Used the Wikimedia Commons 480p VP9 transcode."]
+      },
+      "annotation_path": "annotations/narrated-wikilink.json"
+    },
+    {
+      "id": "silent-interlanguage-linking",
+      "title": "Add an Interlanguage Link",
+      "category": "silent_software",
+      "language": "as",
+      "speech": false,
+      "source": {
+        "page_url": "https://commons.wikimedia.org/wiki/File:Interlanguage_linking_-_Tutorial.webm",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/b/ba/Interlanguage_linking_-_Tutorial.webm/Interlanguage_linking_-_Tutorial.webm.480p.vp9.webm",
+        "author": "-chanakyakdas",
+        "source_statement": "Own work",
+        "license": {
+          "identifier": "CC-BY-SA-4.0",
+          "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+          "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "attribution_required": true,
+          "share_alike": true
+        },
+        "original_sha1": "de336be3de1ca771a3e2aef1e55545f52606d632",
+        "retrieved_at": "2026-07-31"
+      },
+      "media": {
+        "file_name": "silent-interlanguage-linking.webm",
+        "sha256": "6f94d2b93f420e003d2cc29afc51c6e88d1ac3e639e68c0ab9251cebe96302b4",
+        "size_bytes": 1703458,
+        "duration_ms": 117600,
+        "width_px": 854,
+        "height_px": 480,
+        "video_codec": "vp9",
+        "audio": {"present": false, "codec": null},
+        "transformations": [
+          "Used the Wikimedia Commons 480p VP9 transcode.",
+          "Removed the audio stream with FFmpeg 8.1.1."
+        ]
+      },
+      "annotation_path": "annotations/silent-interlanguage-linking.json"
+    },
+    {
+      "id": "silent-editing-tutorial",
+      "title": "Edit a Wikiversity Page",
+      "category": "silent_software",
+      "language": "en",
+      "speech": false,
+      "source": {
+        "page_url": "https://commons.wikimedia.org/wiki/File:Editing_tutorial-large.ogv",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/5/56/Editing_tutorial-large.ogv/Editing_tutorial-large.ogv.480p.vp9.webm",
+        "author": "JWSchmidt and Daveydweeb",
+        "source_statement": "Own work",
+        "license": {
+          "identifier": "CC-BY-SA-3.0",
+          "name": "Creative Commons Attribution-ShareAlike 3.0 Unported",
+          "url": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "attribution_required": true,
+          "share_alike": true
+        },
+        "original_sha1": "6c6256cbe1f9a308f34afeb9c29d64f9fb269239",
+        "retrieved_at": "2026-07-31"
+      },
+      "media": {
+        "file_name": "silent-editing-tutorial.webm",
+        "sha256": "7beb17bb5a9d38c692788f3f0a659a9285e65234f25a27f47cfed121842c7f88",
+        "size_bytes": 4151902,
+        "duration_ms": 115132,
+        "width_px": 640,
+        "height_px": 480,
+        "video_codec": "vp9",
+        "audio": {"present": false, "codec": null},
+        "transformations": [
+          "Used the Wikimedia Commons 480p VP9 transcode.",
+          "Removed the audio stream with FFmpeg 8.1.1."
+        ]
+      },
+      "annotation_path": "annotations/silent-editing-tutorial.json"
+    },
+    {
+      "id": "silent-ffmpeg2theora",
+      "title": "Convert and Upload an Ogg Video",
+      "category": "silent_software",
+      "language": "ja",
+      "speech": false,
+      "source": {
+        "page_url": "https://commons.wikimedia.org/wiki/File:How_to_use_%22ffmpeg2theora.exe%22.ogv",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/2/2d/How_to_use_%22ffmpeg2theora.exe%22.ogv/How_to_use_%22ffmpeg2theora.exe%22.ogv.480p.vp9.webm",
+        "author": "Jihei",
+        "source_statement": "Own work",
+        "license": {
+          "identifier": "CC-BY-SA-3.0",
+          "name": "Creative Commons Attribution-ShareAlike 3.0 Unported",
+          "url": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "attribution_required": true,
+          "share_alike": true
+        },
+        "original_sha1": "cf428f3f3fcbbf0ea2c6fe984a9e0b864f0bc1d5",
+        "retrieved_at": "2026-07-31"
+      },
+      "media": {
+        "file_name": "silent-ffmpeg2theora.webm",
+        "sha256": "17d77925fd04b908c33ed0db7f0e3a20fca7dd954854a5d395df36bf62c12ed6",
+        "size_bytes": 3745263,
+        "duration_ms": 226606,
+        "width_px": 640,
+        "height_px": 480,
+        "video_codec": "vp9",
+        "audio": {"present": false, "codec": null},
+        "transformations": [
+          "Used the Wikimedia Commons 480p VP9 transcode.",
+          "Removed the audio stream with FFmpeg 8.1.1."
+        ]
+      },
+      "annotation_path": "annotations/silent-ffmpeg2theora.json"
+    },
+    {
+      "id": "silent-wikipedia-links",
+      "title": "Add Links in Wikipedia Source",
+      "category": "silent_software",
+      "language": "en",
+      "speech": false,
+      "source": {
+        "page_url": "https://commons.wikimedia.org/wiki/File:Wikipedia_tutorial_-_How_to_make_links.ogv",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/2/28/Wikipedia_tutorial_-_How_to_make_links.ogv/Wikipedia_tutorial_-_How_to_make_links.ogv.480p.vp9.webm",
+        "author": "Frank Schulenburg",
+        "source_statement": "Own work",
+        "license": {
+          "identifier": "CC-BY-SA-3.0",
+          "name": "Creative Commons Attribution-ShareAlike 3.0 Unported",
+          "url": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "attribution_required": true,
+          "share_alike": true
+        },
+        "original_sha1": "a5381d45f9f2cc39ed169dafeeedfa1d5584bd55",
+        "retrieved_at": "2026-07-31"
+      },
+      "media": {
+        "file_name": "silent-wikipedia-links.webm",
+        "sha256": "8d7d42b475cf8a07b24f17226559ec7d2f90381f9a85c5f1781bb7b1f7f7f2d3",
+        "size_bytes": 5829243,
+        "duration_ms": 60601,
+        "width_px": 720,
+        "height_px": 480,
+        "video_codec": "vp9",
+        "audio": {"present": false, "codec": null},
+        "transformations": [
+          "Used the Wikimedia Commons 480p VP9 transcode.",
+          "Removed the audio stream with FFmpeg 8.1.1."
+        ]
+      },
+      "annotation_path": "annotations/silent-wikipedia-links.json"
+    },
+    {
+      "id": "physical-gelator",
+      "title": "Make a Low-Molecular-Weight Gel",
+      "category": "physical",
+      "language": "en",
+      "speech": true,
+      "source": {
+        "page_url": "https://commons.wikimedia.org/wiki/File:How_to_Make_a_Gel1.ogv",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/4/46/How_to_Make_a_Gel1.ogv",
+        "author": "MichChemGSI",
+        "source_statement": "Own work",
+        "license": {
+          "identifier": "CC-BY-SA-3.0",
+          "name": "Creative Commons Attribution-ShareAlike 3.0 Unported",
+          "url": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "attribution_required": true,
+          "share_alike": true
+        },
+        "original_sha1": "625a2dac923c7178d4459c387fa4db521a1110f7",
+        "retrieved_at": "2026-07-31"
+      },
+      "media": {
+        "file_name": "physical-gelator.ogv",
+        "sha256": "461d56348e722e0f5aeeafb13b37b9cd8ba227cfe05327cffee050a1ae9f6697",
+        "size_bytes": 6953402,
+        "duration_ms": 221680,
+        "width_px": 384,
+        "height_px": 288,
+        "video_codec": "theora",
+        "audio": {"present": true, "codec": "vorbis"},
+        "transformations": []
+      },
+      "annotation_path": "annotations/physical-gelator.json"
+    },
+    {
+      "id": "physical-boom-buddy",
+      "title": "Make a Paper BOOM Buddy",
+      "category": "physical",
+      "language": "en",
+      "speech": true,
+      "source": {
+        "page_url": "https://commons.wikimedia.org/wiki/File:How_to_make_a_BOOM_buddy.webm",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/0/07/How_to_make_a_BOOM_buddy.webm/How_to_make_a_BOOM_buddy.webm.480p.vp9.webm",
+        "author": "Barry neeson",
+        "source_statement": "Own work",
+        "license": {
+          "identifier": "CC-BY-SA-4.0",
+          "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+          "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "attribution_required": true,
+          "share_alike": true
+        },
+        "original_sha1": "480b91af00a417701bc37ac4fbc0ce10dd85afec",
+        "retrieved_at": "2026-07-31"
+      },
+      "media": {
+        "file_name": "physical-boom-buddy.webm",
+        "sha256": "32efe5c84359d4ffd40d30ef229a51c53cb258910e8df4f24ea7d29fea3e4cd8",
+        "size_bytes": 15295894,
+        "duration_ms": 155773,
+        "width_px": 854,
+        "height_px": 480,
+        "video_codec": "vp9",
+        "audio": {"present": true, "codec": "opus"},
+        "transformations": ["Used the Wikimedia Commons 480p VP9 transcode."]
+      },
+      "annotation_path": "annotations/physical-boom-buddy.json"
+    },
+    {
+      "id": "physical-sketch-book",
+      "title": "Make a Simple Sketch Book",
+      "category": "physical",
+      "language": "en",
+      "speech": true,
+      "source": {
+        "page_url": "https://commons.wikimedia.org/wiki/File:How_to_make_a_simple_sketch_book.webm",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/a/ae/How_to_make_a_simple_sketch_book.webm/How_to_make_a_simple_sketch_book.webm.480p.vp9.webm",
+        "author": "Barry neeson",
+        "source_statement": "Own work",
+        "license": {
+          "identifier": "CC-BY-SA-4.0",
+          "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+          "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "attribution_required": true,
+          "share_alike": true
+        },
+        "original_sha1": "1fe5fd7307c53bb0e340d89545a41b91e850f7af",
+        "retrieved_at": "2026-07-31"
+      },
+      "media": {
+        "file_name": "physical-sketch-book.webm",
+        "sha256": "8960cad073d415709f22e75b60288cab2c9568c1025b25fa6d0a12b8262edfe3",
+        "size_bytes": 17783895,
+        "duration_ms": 179873,
+        "width_px": 854,
+        "height_px": 480,
+        "video_codec": "vp9",
+        "audio": {"present": true, "codec": "opus"},
+        "transformations": ["Used the Wikimedia Commons 480p VP9 transcode."]
+      },
+      "annotation_path": "annotations/physical-sketch-book.json"
+    },
+    {
+      "id": "physical-hollandaise",
+      "title": "Make Blender Hollandaise",
+      "category": "physical",
+      "language": "en",
+      "speech": true,
+      "source": {
+        "page_url": "https://commons.wikimedia.org/wiki/File:The_Food_Lab_-_How_To_Make_1-Minute_Hollandaise.webm",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/1/16/The_Food_Lab_-_How_To_Make_1-Minute_Hollandaise.webm/The_Food_Lab_-_How_To_Make_1-Minute_Hollandaise.webm.480p.vp9.webm",
+        "author": "Serious Eats",
+        "source_statement": "YouTube source",
+        "license": {
+          "identifier": "CC-BY-3.0",
+          "name": "Creative Commons Attribution 3.0 Unported",
+          "url": "https://creativecommons.org/licenses/by/3.0/",
+          "attribution_required": true,
+          "share_alike": false
+        },
+        "original_sha1": "c21004b5337c8d305964fc093dcb799e43a383c8",
+        "retrieved_at": "2026-07-31"
+      },
+      "media": {
+        "file_name": "physical-hollandaise.webm",
+        "sha256": "f9eba0a337297c820f0eaaba44d7ab9daa5d94dff49cecf8bc92a7d8bdfbe7f4",
+        "size_bytes": 12235835,
+        "duration_ms": 152604,
+        "width_px": 854,
+        "height_px": 480,
+        "video_codec": "vp9",
+        "audio": {"present": true, "codec": "opus"},
+        "transformations": ["Used the Wikimedia Commons 480p VP9 transcode."]
+      },
+      "annotation_path": "annotations/physical-hollandaise.json"
+    },
+    {
+      "id": "short-universal-subtitles-step1",
+      "title": "Type Universal Subtitles",
+      "category": "short_form",
+      "language": "en",
+      "speech": true,
+      "source": {
+        "page_url": "https://commons.wikimedia.org/wiki/File:Miropcf-universal-subs-tutorial-step1.ogv",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/3/30/Miropcf-universal-subs-tutorial-step1.ogv",
+        "author": "Participatory Culture Foundation",
+        "source_statement": "Universal Subtitles screencast",
+        "license": {
+          "identifier": "CC-BY-SA-3.0",
+          "name": "Creative Commons Attribution-ShareAlike 3.0 Unported",
+          "url": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "attribution_required": true,
+          "share_alike": true
+        },
+        "original_sha1": "3b065fd4653193eab872718bb7744597bbeca7e0",
+        "retrieved_at": "2026-07-31"
+      },
+      "media": {
+        "file_name": "short-universal-subtitles-step1.ogv",
+        "sha256": "b0d6876e6ffbff3c39d75900ee3f5c41ff9a2130e0f72640424e3fdccb703c4f",
+        "size_bytes": 2604507,
+        "duration_ms": 65767,
+        "width_px": 512,
+        "height_px": 384,
+        "video_codec": "theora",
+        "audio": {"present": true, "codec": "vorbis"},
+        "transformations": []
+      },
+      "annotation_path": "annotations/short-universal-subtitles-step1.json"
+    },
+    {
+      "id": "short-video-production",
+      "title": "Produce a Short Video",
+      "category": "short_form",
+      "language": "en",
+      "speech": false,
+      "source": {
+        "page_url": "https://commons.wikimedia.org/wiki/File:How_to_make_video.webm",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/a/a7/How_to_make_video.webm/How_to_make_video.webm.480p.vp9.webm",
+        "author": "No Magnolia Productions",
+        "source_statement": "Vimeo source",
+        "license": {
+          "identifier": "CC-BY-3.0",
+          "name": "Creative Commons Attribution 3.0 Unported",
+          "url": "https://creativecommons.org/licenses/by/3.0/",
+          "attribution_required": true,
+          "share_alike": false
+        },
+        "original_sha1": "7dc889f4f1377c83dbf5612df645ed2b36682c7e",
+        "retrieved_at": "2026-07-31"
+      },
+      "media": {
+        "file_name": "short-video-production.webm",
+        "sha256": "0fa98c6f69d8f9cb0f401798dd3c70bc792b99ba16558d830148800adf6022b8",
+        "size_bytes": 2632205,
+        "duration_ms": 57868,
+        "width_px": 854,
+        "height_px": 480,
+        "video_codec": "vp9",
+        "audio": {"present": true, "codec": "opus"},
+        "transformations": ["Used the Wikimedia Commons 480p VP9 transcode."]
+      },
+      "annotation_path": "annotations/short-video-production.json"
+    },
+    {
+      "id": "short-pasta-sauce",
+      "title": "Make Pasta Sauce",
+      "category": "short_form",
+      "language": "en",
+      "speech": true,
+      "source": {
+        "page_url": "https://commons.wikimedia.org/wiki/File:How_to_make_pasta_sauce.ogv",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/d/d9/How_to_make_pasta_sauce.ogv",
+        "author": "Bd7941a",
+        "source_statement": "Own work",
+        "license": {
+          "identifier": "CC-BY-SA-4.0",
+          "name": "Creative Commons Attribution-ShareAlike 4.0 International",
+          "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "attribution_required": true,
+          "share_alike": true
+        },
+        "original_sha1": "97ccc2ca14b7651a7eee14f59d923739a83929cb",
+        "retrieved_at": "2026-07-31"
+      },
+      "media": {
+        "file_name": "short-pasta-sauce.ogv",
+        "sha256": "4c1dd7f9563fcea85c3e5d7f05339ef39b3a8880003965a0edadc2391f468e09",
+        "size_bytes": 4421911,
+        "duration_ms": 59179,
+        "width_px": 532,
+        "height_px": 300,
+        "video_codec": "theora",
+        "audio": {"present": true, "codec": "vorbis"},
+        "transformations": []
+      },
+      "annotation_path": "annotations/short-pasta-sauce.json"
+    },
+    {
+      "id": "short-cravat",
+      "title": "Tie a Wedding Cravat",
+      "category": "short_form",
+      "language": "en",
+      "speech": true,
+      "source": {
+        "page_url": "https://commons.wikimedia.org/wiki/File:How_to_tie_a_Cravat.ogv",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/4/43/How_to_tie_a_Cravat.ogv/How_to_tie_a_Cravat.ogv.480p.vp9.webm",
+        "author": "Coes Fashion",
+        "source_statement": "YouTube source",
+        "license": {
+          "identifier": "CC-BY-3.0",
+          "name": "Creative Commons Attribution 3.0 Unported",
+          "url": "https://creativecommons.org/licenses/by/3.0/",
+          "attribution_required": true,
+          "share_alike": false
+        },
+        "original_sha1": "33338825dd21a3510050ba31db578a5baded8880",
+        "retrieved_at": "2026-07-31"
+      },
+      "media": {
+        "file_name": "short-cravat.webm",
+        "sha256": "db1c41eca7e436f46cf2654ca1c685f0da95764c67badfd09c2f12fa6d52cfa7",
+        "size_bytes": 9093270,
+        "duration_ms": 78623,
+        "width_px": 854,
+        "height_px": 480,
+        "video_codec": "vp9",
+        "audio": {"present": true, "codec": "opus"},
+        "transformations": ["Used the Wikimedia Commons 480p VP9 transcode."]
+      },
+      "annotation_path": "annotations/short-cravat.json"
+    }
+  ]
+}

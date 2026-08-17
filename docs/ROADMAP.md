@@ -51,6 +51,9 @@ Target: November to December 2026
 
 Exit: Gate 3 passes.
 
+Current evidence: The local editor and Odysseus adapter have testable alpha implementations.
+Phase 3 remains open because its security and quality gates are incomplete.
+
 ## Phase 4: Public beta
 
 Target: First quarter of 2027

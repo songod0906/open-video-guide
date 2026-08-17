@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0",
+  "benchmark_id": "physical-sketch-book",
+  "source_sha256": "8960cad073d415709f22e75b60288cab2c9568c1025b25fa6d0a12b8262edfe3",
+  "review": {"status": "seed_single_review", "reviewer_count": 1, "reviewed_at": "2026-07-31", "method": "Visual review with local Whisper transcript support"},
+  "steps": [
+    {"step_id": "step-01", "order": 1, "title": "Fold the paper", "instruction": "Fold ten A4 paper sheets in half.", "start_ms": 15020, "end_ms": 40540, "screenshot": {"time_ms": 33000, "region": {"x": 0.05, "y": 0.08, "width": 0.9, "height": 0.84}}},
+    {"step_id": "step-02", "order": 2, "title": "Cut the folded sheets", "instruction": "Cut each sheet along its fold.", "start_ms": 40540, "end_ms": 53260, "screenshot": {"time_ms": 47000, "region": {"x": 0.05, "y": 0.08, "width": 0.9, "height": 0.84}}},
+    {"step_id": "step-03", "order": 3, "title": "Assemble the pages", "instruction": "Stack the pages between the front and back covers.", "start_ms": 53260, "end_ms": 73100, "screenshot": {"time_ms": 65000, "region": {"x": 0.05, "y": 0.08, "width": 0.9, "height": 0.84}}},
+    {"step_id": "step-04", "order": 4, "title": "Make the spine holes", "instruction": "Mark two spine holes and pierce them with a thumb tack.", "start_ms": 73100, "end_ms": 104220, "screenshot": {"time_ms": 90000, "region": {"x": 0.05, "y": 0.08, "width": 0.9, "height": 0.84}}},
+    {"step_id": "step-05", "order": 5, "title": "Thread the fasteners", "instruction": "Straighten two paper clips and thread one through each hole.", "start_ms": 104220, "end_ms": 130300, "screenshot": {"time_ms": 120000, "region": {"x": 0.05, "y": 0.08, "width": 0.9, "height": 0.84}}},
+    {"step_id": "step-06", "order": 6, "title": "Secure the spine", "instruction": "Twist each wire end tightly and fold it against the spine.", "start_ms": 130300, "end_ms": 149180, "screenshot": {"time_ms": 140000, "region": {"x": 0.05, "y": 0.08, "width": 0.9, "height": 0.84}}}
+  ]
+}
