@@ -70,7 +70,18 @@ def _state() -> dict[str, Any]:
 def test_loads_the_repository_project_state() -> None:
     state = project_context.load_state()
     assert state["product"]["name"] == "Open Video Guide"
-    assert state["task_queue"][0]["id"] == "P0-001"
+
+    task_ids = [task["id"] for task in state["task_queue"]]
+    assert task_ids
+    assert len(task_ids) == len(set(task_ids))
+    assert all(task["priority"].startswith("P") for task in state["task_queue"])
+
+
+def test_keeps_one_ready_task_for_the_next_agent() -> None:
+    state = project_context.load_state()
+    ready_tasks = [task for task in state["task_queue"] if task["state"] == "ready"]
+    assert ready_tasks
+    assert ready_tasks[0]["acceptance"]
 
 
 def test_rejects_duplicate_task_identifiers(tmp_path: Path) -> None:
