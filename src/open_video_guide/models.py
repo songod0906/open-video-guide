@@ -11,7 +11,7 @@ from typing import Any
 
 DEFAULT_SPEECH_MODEL = "tiny.en"
 DEFAULT_VISION_MODEL = "mlx-community/Qwen3-VL-2B-Instruct-3bit"
-PROMPT_VERSION = "guide-window-1"
+PROMPT_VERSION = "guide-window-2"
 
 
 class ModelError(RuntimeError):
@@ -93,19 +93,46 @@ def transcript_for_window(
 
 
 def _proposal_prompt(transcript: str) -> str:
-    speech = transcript[:1200] if transcript else "No speech is available."
-    return (
-        "Output one compact JSON object on one line. "
-        "Use only title and instruction string fields. "
-        "Use a title with no more than five words. "
-        "Use an imperative instruction with no more than 15 words. "
-        "Do not repeat words. "
-        "You create one evidence-grounded tutorial step from this frame. "
-        "Use only visible evidence and the supplied speech. "
-        "Do not invent a control, value, or action. "
-        "Use Review the visible action when evidence is insufficient. "
-        f"Nearby speech: {speech}"
+    """Build the step prompt.
+
+    The prompt keeps the source speech away from the last line.
+    A model can continue from the last line, and speech there caused
+    the model to repeat the prompt instead of reading the frame.
+
+    The prompt also gives no complete fallback sentence to copy.
+    """
+    speech = " ".join(transcript.split())[:1200]
+    context = (
+        f"A speaker says this near the frame: {speech}"
+        if speech
+        else "This part of the video has no speech."
     )
+    return (
+        "You look at one frame from a tutorial video.\n"
+        f"{context}\n"
+        "Name the application, window, or control in the frame.\n"
+        "State the one action that a user does at this moment.\n"
+        "Use only the frame and any speech above.\n"
+        "Do not invent a control, a value, or an action.\n"
+        "Do not copy a sentence from these instructions.\n"
+        "Write a title with a maximum of five words.\n"
+        "Write an imperative instruction with a maximum of 15 words.\n"
+        "Answer with one compact JSON object on one line.\n"
+        "Use only the title and instruction string fields."
+    )
+
+
+def _comparable(value: str) -> str:
+    """Return text for a repetition comparison."""
+    return " ".join(re.sub(r"[^a-z0-9]+", " ", value.lower()).split())
+
+
+def _repeats_prompt(value: str, prompt: str) -> bool:
+    """Return True when model text repeats the prompt."""
+    candidate = _comparable(value)
+    if len(candidate) < 12:
+        return False
+    return candidate in _comparable(prompt)
 
 
 def _json_object(text: str) -> dict[str, Any]:
@@ -152,13 +179,14 @@ def analyze_frame(
     model_name: str = DEFAULT_VISION_MODEL,
 ) -> StepProposal:
     """Propose one step with a local vision-language model."""
+    proposal_prompt = _proposal_prompt(transcript)
     try:
         model, processor, helpers = _load_vision_model(model_name)
         config, generate, apply_chat_template = helpers
         prompt = apply_chat_template(
             processor,
             config,
-            _proposal_prompt(transcript),
+            proposal_prompt,
             num_images=1,
         )
         result = generate(
@@ -181,4 +209,6 @@ def analyze_frame(
     instruction = str(value.get("instruction", "")).strip()
     if not title or not instruction:
         raise ModelError("The vision model returned an incomplete step.")
+    if _repeats_prompt(instruction, proposal_prompt) or _repeats_prompt(title, proposal_prompt):
+        raise ModelError("The vision model repeated the prompt text.")
     return StepProposal(title=title[:120], instruction=instruction[:600])

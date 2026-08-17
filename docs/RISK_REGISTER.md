@@ -23,6 +23,8 @@
 | R-19 | Local jobs use excessive storage | Medium | High | Limit uploads and show stored job sizes | Software engineer |
 | R-20 | Another website sends a local editor command | Medium | High | Check the host and write-request origin | Security reviewer |
 | R-21 | An agent uses stale project context | Medium | High | Refresh from Git and keep one project state | Technical lead |
+| R-22 | A model repeats prompt text as an instruction | High | High | Keep fallback text out of the prompt and test for prompt echo | AI engineer |
+| R-23 | An agent test replaces a necessary human test | Medium | Medium | Record the test type and keep the human gate open | Product owner |
 
 Review this register at each stage gate.
 Add a risk when a change adds a new trust boundary.

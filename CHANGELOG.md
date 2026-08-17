@@ -28,3 +28,12 @@ JSON means JavaScript Object Notation.
 - Markdown, HTML, JSON, and image exports
 - Local Model Context Protocol adapter and smoke test
 - Odysseus setup instructions
+- Local review editor with corrections and exports
+- Shared Codex and Claude project handoff
+- Guard that rejects model text that repeats the prompt
+
+### Fixed
+
+- The vision model repeated the prompt as a step instruction on silent video.
+  The prompt now gives no fallback sentence and ends with the answer format.
+  The prompt version changed from `guide-window-1` to `guide-window-2`.
