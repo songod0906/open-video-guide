@@ -33,7 +33,7 @@ local-ai = [
   "torchvision>=0.22,<1"
 ]
 mcp = [
-  "mcp>=1.29,<2"
+  "mcp>=1.29,<3"
 ]
 web = [
   "fastapi>=0.116,<1",
