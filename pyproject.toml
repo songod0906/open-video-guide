@@ -28,7 +28,7 @@ dependencies = [
 local-ai = [
   "faster-whisper>=1.2,<2",
   "mlx-vlm>=0.6.8,<0.7",
-  "Pillow>=11,<13",
+  "Pillow>=11,<14",
   "torch>=2.7,<3",
   "torchvision>=0.22,<1"
 ]
